@@ -41,38 +41,38 @@ angular.module('tactics', ['ionic', 'tactics.controllers'])
     }
   })
 
-  .state('app.companyinformation', {
+/*  .state('app.companyinformation', {
       url: '/companyinformation',
       views: {
         'menuContent': {
           templateUrl: 'templates/companyinformation.html'
         }
       }
-    })
+    }) */
 
-    .state('app.finance', {
+    .state('app.StartUp Calculator', {
         url: '/finance',
         views: {
           'menuContent': {
-            templateUrl: 'templates/finance.html'
+            templateUrl: 'templates/StartUp Calculator.html'
           }
         }
       })
 
-      .state('app.strategies', {
+      .state('app.Break Even Analysis', {
           url: '/strategies',
           views: {
             'menuContent': {
-              templateUrl: 'templates/strategies.html'
+              templateUrl: 'templates/Break Even Analysis.html'
             }
           }
         })
 
-        .state('app.marketing', {
+        .state('app.SWOT', {
             url: '/marketing',
             views: {
               'menuContent': {
-                templateUrl: 'templates/marketing.html'
+                templateUrl: 'templates/SWOT.html'
               }
             }
           })
