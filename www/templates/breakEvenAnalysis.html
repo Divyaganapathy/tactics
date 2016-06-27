@@ -1,9 +1,19 @@
 <ion-view view-title="Break Even Analysis">
   <ion-content>
     <h1>Break Even Analysis</h1>
-
-  <div class="button-bar">
-   <a class="button button-calm large_button">Break Even Analysis</a>
-  </div>
+    <form ng-submit="">
+                    <div class="list list-inset">
+                        <label class="item item-input">
+                            <textarea ng-model="task.content" rows="2" placeholder="Fixed Cost"></textarea>
+                        </label>
+                        <label class="item item-input">
+                            <textarea ng-model="task.content" rows="2" placeholder="Variable cost per unit"></textarea>
+                        </label>
+                        <label class="item item-input">
+                            <textarea ng-model="task.content" rows="2" placeholder="Unit price"></textarea>
+                        </label>
+                    <button type="submit" class="button button-block button-positive">Calculate</button>
+                    </div>
+                </form>
 </ion-content>
 </ion-view>
