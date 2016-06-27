@@ -50,32 +50,42 @@ angular.module('tactics', ['ionic', 'tactics.controllers'])
       }
     }) */
 
-    .state('app.StartUp Calculator', {
-        url: '/finance',
+    .state('app.startUpCalculator', {
+        url: '/StartUp Calculator',
         views: {
           'menuContent': {
-            templateUrl: 'templates/StartUp Calculator.html'
+            templateUrl: 'templates/startUpCalculator.html'
           }
         }
       })
 
-      .state('app.Break Even Analysis', {
-          url: '/strategies',
+      .state('app.breakEvenAnalysis', {
+          url: '/Break Even Analysis',
           views: {
             'menuContent': {
-              templateUrl: 'templates/Break Even Analysis.html'
+              templateUrl: 'templates/breakEvenAnalysis.html'
             }
           }
         })
 
-        .state('app.SWOT', {
-            url: '/marketing',
+        .state('app.swotAnalysis', {
+            url: '/SWOT Analysis',
             views: {
               'menuContent': {
-                templateUrl: 'templates/SWOT.html'
+                templateUrl: 'templates/swotAnalysis.html'
               }
             }
           })
+
+          .state('app.marketingMix', {
+              url: '/Marketing Mix',
+              views: {
+                'menuContent': {
+                  templateUrl: 'templates/marketingMix.html'
+                }
+              }
+            })
+
 
     .state('app.playlists', {
       url: '/playlists',
