@@ -51,7 +51,7 @@ angular.module('tactics', ['ionic', 'tactics.controllers'])
     }) */
 
     .state('app.startUpCalculator', {
-        url: '/StartUp Calculator',
+        url: '/startUpCalculator',
         views: {
           'menuContent': {
             templateUrl: 'templates/startUpCalculator.html'
@@ -60,7 +60,7 @@ angular.module('tactics', ['ionic', 'tactics.controllers'])
       })
 
       .state('app.breakEvenAnalysis', {
-          url: '/Break Even Analysis',
+          url: '/breakEvenAnalysis',
           views: {
             'menuContent': {
               templateUrl: 'templates/breakEvenAnalysis.html'
@@ -69,22 +69,58 @@ angular.module('tactics', ['ionic', 'tactics.controllers'])
         })
 
         .state('app.swotAnalysis', {
-            url: '/SWOT Analysis',
+            url: '/swotAnalysis',
             views: {
               'menuContent': {
                 templateUrl: 'templates/swotAnalysis.html'
               }
             }
           })
-
           .state('app.marketingMix', {
-              url: '/Marketing Mix',
+              url: '/marketingMix',
               views: {
                 'menuContent': {
                   templateUrl: 'templates/marketingMix.html'
                 }
               }
-            });
+            })
+            .state('app.initialSetupCost', {
+                url: '/initialSetupCost',
+                views: {
+                  'menuContent': {
+                    templateUrl: 'templates/initialSetupCost.html'
+                  }
+                }
+              })
+
+              .state('app.monthlyExpenses', {
+                  url: '/monthlyExpenses',
+                  views: {
+                    'menuContent': {
+                      templateUrl: 'templates/monthlyExpenses.html'
+                    }
+                  }
+                })
+
+    .state('app.playlists', {
+      url: '/playlists',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/playlists.html',
+          controller: 'PlaylistsCtrl'
+        }
+      }
+    })
+
+  .state('app.single', {
+    url: '/playlists/:playlistId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/playlist.html',
+        controller: 'PlaylistCtrl'
+      }
+    }
+  });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 });
