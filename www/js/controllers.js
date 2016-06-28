@@ -39,18 +39,38 @@ angular.module('tactics.controllers', [])
       $scope.closeLogin();
     }, 1000);
   };
-})
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+
+
+  $scope.productList = [
+    { text: "1. Does your company produce variety of products in order to meet customer satisfaction?", checked: true },
+    { text: "2. Does your brand name influence company sales?", checked: false },
+    { text: "3. Do your products meet customer's requirement?", checked: false },
+    { text: "4. Do customers complain about quality of products?", checked: false },
+    { text: "5. Is the packaging effective?", checked: false },
+    { text: "6. Does your company provide warranty for your products sold?", checked: false }
   ];
-})
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+  $scope.pushNotificationChange = function() {
+    console.log('Push Notification Change', $scope.pushNotification.checked);
+  };
+
+  $scope.pushNotification = { checked: true };
+
+
+  $scope.priceList = [
+    { text: "1. Do you allow for discounts of your products?", checked: true },
+    { text: "2. Are the prices of the products appropriate?", checked: false },
+    { text: "3. Does your pricing decisions allow for payment period?", checked: false },
+    { text: "4. Does your pricing strategy give room for large customer bases?", checked: false },
+    { text: "5. Does applying strategies to price leads to increase in sales, thereby contibuting to achievement of objectives?", checked: false },
+    { text: "6. Does your pricing decisions allow for credit terms?", checked: false }
+  ];
+
+  $scope.pushNotificationChange = function() {
+    console.log('Push Notification Change', $scope.pushNotification.checked);
+  };
+
+  $scope.pushNotification = { checked: true };
+
 });
