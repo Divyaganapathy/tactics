@@ -2,27 +2,54 @@
   <ion-content>
     <h2>Initial Expenses</h2>
     <form ng-submit="">
-                    <div class="list list-inset">
-                      <label ng-model="task1.title">
-                      </label>
-                      <label class="item item-input">
-                          <textarea ng-model="task1.content1" rows="1" placeholder="Legal cost"></textarea>
-                      </label>
-                      <label class="item item-input">
-                          <textarea ng-model="task1.content2" rows="1" placeholder="Insurance"></textarea>
-                      </label>
-                      <label class="item item-input">
-                          <textarea ng-model="task1.content3" rows="1" placeholder="Business Licenses"></textarea>
-                      </label>
-                      <label class="item item-input">
-                          <textarea ng-model="task1.content4" rows="1" placeholder="Franchise cost"></textarea>
-                      </label>
-                      <label class="item item-input">
-                          <textarea ng-model="task1.content5" rows="1" placeholder="Operating costs"></textarea>
-                      </label>
-                      <button type="submit" class="button button-block button-calm">Save</button>
+                            <div class="col">
+                            <label class="item">
+                              Legal cost
+                              <div class="col col-2"></div><input type="number" placeholder="{{data.legal}}" ng-model="data.legal">
+                            </div>
+                        </label>
+
+                        <div class="col">
+                        <label class="item">
+                          Insurance<input type="number" placeholder="{{data.insurance}}" ng-model="data.insurance">
+                        </div>
+                        </label>
+
+                        <div class="col">
+                        <label class="item">
+                          Business Licenses<input type="number" placeholder="{{data.licence}}" ng-model="data.licence">
+                        </div>
+                        </label>
+
+                        <div class="col">
+                        <label class="item">
+                          Franchisee cost<input type="number" placeholder="{{data.franchisee}}" ng-model="data.franchisee">
+                        </div>
+                        </label>
+
+                        <div class="col">
+                        <label class="item">
+                          Operating costs<input type="number" placeholder="{{data.operating}}" ng-model="data.operating">
+                        </div>
+                        </label>
+                    </form>
+          <div class="col">
+            <label class="item item-positive item-floating-label" id="initialresult">Total<br>
+              {{initialresult()}}
+            </label>
+          </div>
+          <div class="col">
+          Legal cost = {{data.legal}}</div>
+            <div class="col">
+          Insurance = {{data.insurance}}</div>
+          <div class="col">
+          Business Licenses = {{data.licence}}</div>
+        <div class="col"> Franchisee cost = {{data.franchisee}}</div>
+        <div class="col">  Operating costs = {{data.operating}}</div>
+          <div class="col">Total = {{initialresult()}}</div>
+
+                          <button type="submit" class="button button-block button-calm">Save</button>
                     <a class="button button-block button-positive" href="#/app/initialsub3">Next</a>
-                    </div>
-                </form>
+
   </ion-content>
 </ion-view>
