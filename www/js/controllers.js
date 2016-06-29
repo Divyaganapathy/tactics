@@ -101,3 +101,8 @@ angular.module('tactics.controllers', [])
   $scope.pushNotification = { checked: true };
 
 });
+
+/*  $scope.addListItem= function(){
+    $scope.array.unshift()
+
+  }*/

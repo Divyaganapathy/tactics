@@ -128,6 +128,15 @@ angular.module('tactics', ['ionic', 'tactics.controllers'])
                         }
                       })
 
+                      .state('app.initialinfra', {
+                          url: '/initialinfra',
+                          views: {
+                            'menuContent': {
+                              templateUrl: 'templates/initialinfra.html'
+                            }
+                          }
+                        })
+
                       .state('app.monthlysub1', {
                           url: '/monthlysub1',
                           views: {
