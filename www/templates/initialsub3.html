@@ -2,27 +2,52 @@
   <ion-content>
     <h2>Other Setup Expenses</h2>
     <form ng-submit="">
-                    <div class="list list-inset">
-                      <label ng-model="task2.title">
-                      </label>
-                      <label class="item item-input">
-                          <textarea ng-model="task2.content1" rows="1" placeholder="Logo Design"></textarea>
-                      </label>
-                      <label class="item item-input">
-                          <textarea ng-model="task2.content2" rows="1" placeholder="Website Design"></textarea>
-                      </label>
-                      <label class="item item-input">
-                          <textarea ng-model="task2.content3" rows="1" placeholder="Payroll"></textarea>
-                      </label>
-                      <label class="item item-input">
-                          <textarea ng-model="task2.content4" rows="1" placeholder="Training"></textarea>
-                      </label>
-                      <label class="item item-input">
-                          <textarea ng-model="task2.content5" rows="1" placeholder="Others"></textarea>
-                      </label>
-                    <button type="submit" class="button button-block button-positive">Save</button>
-                      </div>
-                    </div>
-                </form>
-  </ion-content>
+                            <div class="col">
+                            <label class="item">
+                              Logo Design
+                              <div class="col col-2"></div><input type="number" placeholder="{{data.logoDesign}}" ng-model="data.logoDesign">
+                            </div>
+                        </label>
+
+                        <div class="col">
+                        <label class="item">
+                          Website Design<input type="number" placeholder="{{data.websiteDesign}}" ng-model="data.websiteDesign">
+                        </div>
+                        </label>
+
+                        <div class="col">
+                        <label class="item">
+                          Payroll<input type="number" placeholder="{{data.payroll}}" ng-model="data.payroll">
+                        </div>
+                        </label>
+
+                        <div class="col">
+                        <label class="item">
+                          Training<input type="number" placeholder="{{data.training}}" ng-model="data.training">
+                        </div>
+                        </label>
+
+                        <div class="col">
+                        <label class="item">
+                          Others<input type="number" placeholder="{{data.others}}" ng-model="data.others">
+                        </div>
+                        </label>
+                    </form>
+          <div class="col">
+            <label class="item item-positive item-floating-label" id="otherresult">Total<br>
+              {{otherresult()}}
+            </label>
+          </div>
+          <div class="col">
+            Logo Design = {{data.logoDesign}}</div>
+            <div class="col">
+          Website Design = {{data.websiteDesign}}</div>
+          <div class="col">
+          Payroll = {{data.payroll}}</div>
+        <div class="col"> Training = {{data.training}}</div>
+        <div class="col"> Others = {{data.others}}</div>
+          <div class="col">Total = {{otherresult()}}</div>
+
+          <button type="submit" class="button button-block button-positive">Save</button>
+      </ion-content>
 </ion-view>
