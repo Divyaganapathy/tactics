@@ -73,36 +73,41 @@ angular.module('tactics.controllers', [])
 
   $scope.pushNotification = { checked: true };
 
-  $scope.promotionList = [
-    { text: "1. Do the people know your products based on promotional strategy?", checked: true },
-    { text: "2. Does your organization apply sales promotion as one of the promotion strategies?", checked: false },
-    { text: "3. Does your organization apply advertising promotion as one of the promotion strategies?", checked: false },
-    { text: "4. Does your organization apply selling promotion as one of the promotion strategies?", checked: false },
-    { text: "5. Does your promotion influence the rate of purchase positively?", checked: false },
-  ];
-
-  $scope.pushNotificationChange = function() {
-    console.log('Push Notification Change', $scope.pushNotification.checked);
+  $scope.data = {
+    'a': 0,
+    'b': 0,
+    'c': 0,
+    'd': 0,
+    'e': 0,
+    'u': 0,
+    'legal': 0,
+    'insurance': 0,
+    'licence': 0,
+    'franchisee': 0,
+    'operating': 0,
+    'iresult': 0,
+    'logoDesign': 0,
+    'websiteDesign': 0,
+    'payroll': 0,
+    'training': 0,
+    'others': 0,
+    'oresult': 0
   };
 
-  $scope.pushNotification = { checked: true };
-
-  $scope.placeList = [
-    { text: "1. Do your products get to target the customers?", checked: true },
-    { text: "2. Does the location of products aid accessibility?", checked: false },
-    { text: "3. Is channel coverage effective?", checked: false },
-    { text: "4. Is transportation effective?", checked: false },
-  ];
-
-  $scope.pushNotificationChange = function() {
-    console.log('Push Notification Change', $scope.pushNotification.checked);
+  $scope.result = function() {
+    $scope.data.u = $scope.data.a + $scope.data.b + $scope.data.c + $scope.data.d + $scope.data.e;
+    return $scope.data.u;
   };
 
-  $scope.pushNotification = { checked: true };
 
-});
+  $scope.initialresult = function() {
+    $scope.data.iresult = $scope.data.legal + $scope.data.insurance + $scope.data.licence + $scope.data.franchisee + $scope.data.operating;
+    return $scope.data.iresult;
+  };
 
-/*  $scope.addListItem= function(){
-    $scope.array.unshift()
+  $scope.otherresult = function() {
+    $scope.data.oresult = $scope.data.logoDesign + $scope.data.websiteDesign + $scope.data.payroll + $scope.data.training + $scope.data.others;
+    return $scope.data.oresult;
+  };
 
-  }*/
+  });
