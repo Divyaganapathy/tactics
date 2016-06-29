@@ -102,25 +102,14 @@ angular.module('tactics', ['ionic', 'tactics.controllers'])
                   }
                 })
 
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
+                .state('app.monthlysub1', {
+                    url: '/monthlysub1',
+                    views: {
+                      'menuContent': {
+                        templateUrl: 'templates/monthlysub1.html'
+                      }
+                    }
+                  })
 
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
-      }
-    }
-  });
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/home');
+    $urlRouterProvider.otherwise('/app/home');
 });
