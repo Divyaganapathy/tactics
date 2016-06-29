@@ -79,12 +79,35 @@ angular.module('tactics.controllers', [])
     'c': 0,
     'd': 0,
     'e': 0,
-    'u': 0
+    'u': 0,
+    'legal': 0,
+    'insurance': 0,
+    'licence': 0,
+    'franchisee': 0,
+    'operating': 0,
+    'iresult': 0,
+    'logoDesign': 0,
+    'websiteDesign': 0,
+    'payroll': 0,
+    'training': 0,
+    'others': 0,
+    'oresult': 0
   };
 
   $scope.result = function() {
     $scope.data.u = $scope.data.a + $scope.data.b + $scope.data.c + $scope.data.d + $scope.data.e;
     return $scope.data.u;
+  };
+
+
+  $scope.initialresult = function() {
+    $scope.data.iresult = $scope.data.legal + $scope.data.insurance + $scope.data.licence + $scope.data.franchisee + $scope.data.operating;
+    return $scope.data.iresult;
+  };
+
+  $scope.otherresult = function() {
+    $scope.data.oresult = $scope.data.logoDesign + $scope.data.websiteDesign + $scope.data.payroll + $scope.data.training + $scope.data.others;
+    return $scope.data.oresult;
   };
 
   });
