@@ -102,6 +102,79 @@ angular.module('tactics', ['ionic', 'tactics.controllers'])
                   }
                 })
 
+<<<<<<< HEAD
+=======
+                .state('app.initialsub1', {
+                    url: '/initialsub1',
+                    views: {
+                      'menuContent': {
+                        templateUrl: 'templates/initialsub1.html'
+                      }
+                    }
+                  })
+                  .state('app.initialsub2', {
+                      url: '/initialsub2',
+                      views: {
+                        'menuContent': {
+                          templateUrl: 'templates/initialsub2.html'
+                        }
+                      }
+                    })
+
+                    .state('app.initialsub3', {
+                        url: '/initialsub3',
+                        views: {
+                          'menuContent': {
+                            templateUrl: 'templates/initialsub3.html'
+                          }
+                        }
+                      })
+
+                      .state('app.initialinfra', {
+                          url: '/initialinfra',
+                          views: {
+                            'menuContent': {
+                              templateUrl: 'templates/initialinfra.html'
+                            }
+                          }
+                        })
+
+                      .state('app.monthlysub1', {
+                          url: '/monthlysub1',
+                          views: {
+                            'menuContent': {
+                              templateUrl: 'templates/monthlysub1.html'
+                            }
+                          }
+                        })
+                        .state('app.monthlysub2', {
+                            url: '/monthlysub2',
+                            views: {
+                              'menuContent': {
+                                templateUrl: 'templates/monthlysub2.html'
+                              }
+                            }
+                          })
+
+                          .state('app.monthlysub3', {
+                              url: '/monthlysub3',
+                              views: {
+                                'menuContent': {
+                                  templateUrl: 'templates/monthlysub3.html'
+                                }
+                              }
+                            })
+
+                            .state('app.monthlysub4', {
+                                url: '/monthlysub4',
+                                views: {
+                                  'menuContent': {
+                                    templateUrl: 'templates/monthlysub4.html'
+                                  }
+                                }
+                              })
+
+>>>>>>> c27c44ff2c34c7d61c329bee9ebe46db7f34c324
     .state('app.playlists', {
       url: '/playlists',
       views: {
