@@ -82,7 +82,6 @@ angular.module('tactics.controllers', [])
     'u': 0
   };
 
-
   $scope.result = function() {
     $scope.data.u = $scope.data.a + $scope.data.b + $scope.data.c + $scope.data.d + $scope.data.e;
     return $scope.data.u;

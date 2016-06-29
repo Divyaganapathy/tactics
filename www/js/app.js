@@ -102,14 +102,86 @@ angular.module('tactics', ['ionic', 'tactics.controllers'])
                   }
                 })
 
-                .state('app.monthlysub1', {
-                    url: '/monthlysub1',
+                .state('app.initialsub1', {
+                    url: '/initialsub1',
                     views: {
                       'menuContent': {
-                        templateUrl: 'templates/monthlysub1.html'
+                        templateUrl: 'templates/initialsub1.html'
                       }
                     }
                   })
+                  .state('app.initialsub2', {
+                      url: '/initialsub2',
+                      views: {
+                        'menuContent': {
+                          templateUrl: 'templates/initialsub2.html'
+                        }
+                      }
+                    })
 
-    $urlRouterProvider.otherwise('/app/home');
+                    .state('app.initialsub3', {
+                        url: '/initialsub3',
+                        views: {
+                          'menuContent': {
+                            templateUrl: 'templates/initialsub3.html'
+                          }
+                        }
+                      })
+
+                      .state('app.monthlysub1', {
+                          url: '/monthlysub1',
+                          views: {
+                            'menuContent': {
+                              templateUrl: 'templates/monthlysub1.html'
+                            }
+                          }
+                        })
+                        .state('app.monthlysub2', {
+                            url: '/monthlysub2',
+                            views: {
+                              'menuContent': {
+                                templateUrl: 'templates/monthlysub2.html'
+                              }
+                            }
+                          })
+
+                          .state('app.monthlysub3', {
+                              url: '/monthlysub3',
+                              views: {
+                                'menuContent': {
+                                  templateUrl: 'templates/monthlysub3.html'
+                                }
+                              }
+                            })
+
+                            .state('app.monthlysub4', {
+                                url: '/monthlysub4',
+                                views: {
+                                  'menuContent': {
+                                    templateUrl: 'templates/monthlysub4.html'
+                                  }
+                                }
+                              })
+
+    .state('app.playlists', {
+      url: '/playlists',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/playlists.html',
+          controller: 'PlaylistsCtrl'
+        }
+      }
+    })
+
+  .state('app.single', {
+    url: '/playlists/:playlistId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/playlist.html',
+        controller: 'PlaylistCtrl'
+      }
+    }
+  });
+  // if none of the above states are matched, use this as the fallback
+  $urlRouterProvider.otherwise('/app/home');
 });
