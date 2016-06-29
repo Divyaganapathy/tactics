@@ -102,8 +102,6 @@ angular.module('tactics', ['ionic', 'tactics.controllers'])
                   }
                 })
 
-<<<<<<< HEAD
-=======
                 .state('app.initialsub1', {
                     url: '/initialsub1',
                     views: {
@@ -129,15 +127,6 @@ angular.module('tactics', ['ionic', 'tactics.controllers'])
                           }
                         }
                       })
-
-                      .state('app.initialinfra', {
-                          url: '/initialinfra',
-                          views: {
-                            'menuContent': {
-                              templateUrl: 'templates/initialinfra.html'
-                            }
-                          }
-                        })
 
                       .state('app.monthlysub1', {
                           url: '/monthlysub1',
@@ -174,7 +163,6 @@ angular.module('tactics', ['ionic', 'tactics.controllers'])
                                 }
                               })
 
->>>>>>> c27c44ff2c34c7d61c329bee9ebe46db7f34c324
     .state('app.playlists', {
       url: '/playlists',
       views: {
