@@ -73,4 +73,19 @@ angular.module('tactics.controllers', [])
 
   $scope.pushNotification = { checked: true };
 
-});
+  $scope.data = {
+    'a': 0,
+    'b': 0,
+    'c': 0,
+    'd': 0,
+    'e': 0,
+    'u': 0
+  };
+
+
+  $scope.result = function() {
+    $scope.data.u = $scope.data.a + $scope.data.b + $scope.data.c + $scope.data.d + $scope.data.e;
+    return $scope.data.u;
+  };
+
+  });
