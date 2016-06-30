@@ -73,6 +73,33 @@ angular.module('tactics.controllers', [])
 
   $scope.pushNotification = { checked: true };
 
+  $scope.promotionList = [
+    { text: "1. Do the people know your products based on promotional strategy?", checked: true },
+    { text: "2. Does your organization apply sales promotion as one of the promotion strategies?", checked: false },
+    { text: "3. Does your organization apply advertising promotion as one of the promotion strategies?", checked: false },
+    { text: "4. Does your organization apply selling promotion as one of the promotion strategies?", checked: false },
+    { text: "5. Does your promotion influence the rate of purchase positively?", checked: false },
+  ];
+
+  $scope.pushNotificationChange = function() {
+    console.log('Push Notification Change', $scope.pushNotification.checked);
+  };
+
+  $scope.pushNotification = { checked: true };
+
+  $scope.placeList = [
+    { text: "1. Do your products get to target the customers?", checked: true },
+    { text: "2. Does the location of products aid accessibility?", checked: false },
+    { text: "3. Is channel coverage effective?", checked: false },
+    { text: "4. Is transportation effective?", checked: false },
+  ];
+
+  $scope.pushNotificationChange = function() {
+    console.log('Push Notification Change', $scope.pushNotification.checked);
+  };
+
+  $scope.pushNotification = { checked: true };
+
   $scope.data = {
     'a': 0,
     'b': 0,
