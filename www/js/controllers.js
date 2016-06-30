@@ -73,13 +73,40 @@ angular.module('tactics.controllers', [])
 
   $scope.pushNotification = { checked: true };
 
+  $scope.promotionList = [
+    { text: "1. Do the people know your products based on promotional strategy?", checked: true },
+    { text: "2. Does your organization apply sales promotion as one of the promotion strategies?", checked: false },
+    { text: "3. Does your organization apply advertising promotion as one of the promotion strategies?", checked: false },
+    { text: "4. Does your organization apply selling promotion as one of the promotion strategies?", checked: false },
+    { text: "5. Does your promotion influence the rate of purchase positively?", checked: false },
+  ];
+
+  $scope.pushNotificationChange = function() {
+    console.log('Push Notification Change', $scope.pushNotification.checked);
+  };
+
+  $scope.pushNotification = { checked: true };
+
+  $scope.placeList = [
+    { text: "1. Do your products get to target the customers?", checked: true },
+    { text: "2. Does the location of products aid accessibility?", checked: false },
+    { text: "3. Is channel coverage effective?", checked: false },
+    { text: "4. Is transportation effective?", checked: false },
+  ];
+
+  $scope.pushNotificationChange = function() {
+    console.log('Push Notification Change', $scope.pushNotification.checked);
+  };
+
+  $scope.pushNotification = { checked: true };
+
   $scope.data = {
-    'a': 0,
-    'b': 0,
-    'c': 0,
-    'd': 0,
-    'e': 0,
-    'u': 0,
+    'irent': 0,
+    'computer': 0,
+    'tools': 0,
+    'offsupp': 0,
+    'preoperating': 0,
+    'infraresult': 0,
     'legal': 0,
     'insurance': 0,
     'licence': 0,
@@ -91,13 +118,40 @@ angular.module('tactics.controllers', [])
     'payroll': 0,
     'training': 0,
     'others': 0,
-    'oresult': 0
+    'oresult': 0,
+    'rent': 0,
+    'equip': 0,
+    'inventory': 0,
+    'supplies': 0,
+    'utilities': 0,
+    'infrasum': 0,
+    'mlegal': 0,
+    'shipping': 0,
+    'business': 0,
+    'mfranchisee': 0,
+    'moperating': 0,
+    'legalsum': 0,
+    'salary': 0,
+    'payroll': 0,
+    'loan': 0,
+    'taxes': 0,
+    'health': 0,
+    'taxsum': 0,
+    'adv': 0,
+    'tele': 0,
+    'internet': 0,
+    'webhost': 0,
+    'otherss': 0,
+    'commsum': 0,
+    'fixed': 0,
+    'varcost': 0,
+    'unitprice': 0,
+    'breakeven': 0
   };
 
-
-  $scope.result = function() {
-    $scope.data.u = $scope.data.a + $scope.data.b + $scope.data.c + $scope.data.d + $scope.data.e;
-    return $scope.data.u;
+  $scope.infraresult = function() {
+    $scope.data.infraresult = $scope.data.irent + $scope.data.computer + $scope.data.tools + $scope.data.offsupp + $scope.data.preoperating;
+    return $scope.data.infraresult;
   };
 
 
@@ -110,5 +164,32 @@ angular.module('tactics.controllers', [])
     $scope.data.oresult = $scope.data.logoDesign + $scope.data.websiteDesign + $scope.data.payroll + $scope.data.training + $scope.data.others;
     return $scope.data.oresult;
   };
+
+
+  $scope.infrasum = function() {
+     $scope.data.infrasum = $scope.data.rent + $scope.data.equip + $scope.data.inventory + $scope.data.supplies + $scope.data.utilities;
+     return $scope.data.infrasum;
+   };
+
+
+   $scope.legalsum = function() {
+     $scope.data.legalsum = $scope.data.mlegal + $scope.data.shipping + $scope.data.business + $scope.data.mfranchisee + $scope.data.moperating;
+     return $scope.data.legalsum;
+   };
+
+   $scope.taxsum = function() {
+     $scope.data.taxsum = $scope.data.salary + $scope.data.payroll + $scope.data.loan + $scope.data.taxes + $scope.data.health;
+     return $scope.data.taxsum;
+   };
+
+   $scope.commsum = function() {
+     $scope.data.commsum = $scope.data.adv + $scope.data.tele + $scope.data.internet + $scope.data.webhost + $scope.data.otherss;
+     return $scope.data.commsum;
+   };
+
+   $scope.breakeven = function() {
+     $scope.data.breakeven = $scope.data.fixed / ($scope.data.unitprice - $scope.data.varcost);
+     return $scope.data.breakeven;
+   };
 
   });

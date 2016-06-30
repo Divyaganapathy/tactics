@@ -2,32 +2,56 @@
   <ion-content>
     <h2>Salary and Taxes</h2>
     <form ng-submit="">
-                    <div class="list list-inset">
+                            <div class="col">
+                            <label class="item">
+                            Salary
+                              <div class="col col-2"></div><input type="number" placeholder="{{data.salary}}" ng-model="data.salary">
+                            </div>
+                        </label>
+                        <div class="col">
+                        <label class="item">
+                          Payroll Tax<input type="number" placeholder="{{data.payroll}}" ng-model="data.payroll">
+                        </div>
+                        </label>
 
-                    <label ng-model="task2.title">
+                        <div class="col">
+                        <label class="item">
+                        Interest and Principal on loan<input type="number" placeholder="{{data.loan}}" ng-model="data.loan">
+                        </div>
+                        </label>
 
-                    </label>
-                    <label class="item item-input">
-                        <textarea ng-model="task2.content1" rows="1" placeholder="Salary"></textarea>
-                    </label>
-                    <label class="item item-input">
-                        <textarea ng-model="task2.content2" rows="1" placeholder="Payroll Tax"></textarea>
-                    </label>
-                    <label class="item item-input">
-                        <textarea ng-model="task2.content3" rows="1" placeholder="Interest and Principal on loan"></textarea>
-                    </label>
-                    <label class="item item-input">
-                        <textarea ng-model="task2.content4" rows="1" placeholder="Taxes"></textarea>
-                    </label>
-                    <label class="item item-input">
-                        <textarea ng-model="task2.content5" rows="1" placeholder="Health"></textarea>
-                    </label>
+                        <div class="col">
+                        <label class="item">
+                        Taxes<input type="number" placeholder="{{data.taxes}}" ng-model="data.taxes">
+                        </div>
+                        </label>
+
+                        <div class="col">
+                        <label class="item">
+                        Health<input type="number" placeholder="{{data.health}}" ng-model="data.health">
+                        </div>
+                        </label>
+                    </form>
+
+                    <div class="col">
+                      <label class="item item-positive item-floating-label" id="taxsum">Total<br>
+                        {{taxsum()}}
+                      </label>
+                    </div>
+                    <div class="col">
+                    Salary = {{data.salary}}</div>
+                      <div class="col">
+                    Payroll Tax = {{data.payroll}}</div>
+                    <div class="col">
+                    Interest and Principal on loan = {{data.loan}}</div>
+                  <div class="col"> Taxes = {{data.taxes}}</div>
+                  <div class="col">  Health = {{data.health}}</div>
+                    <div class="col">Total = {{taxsum()}}</div>
+
+
                   <button type="submit" class="button button-block button-calm">Save</button>
                   <a class="button button-block button-positive" href="#/app/monthlysub4">Next</a>
 
 
-
-                    </div>
-                </form>
   </ion-content>
 </ion-view>

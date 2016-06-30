@@ -5,50 +5,49 @@
                             <div class="col">
                             <label class="item">
                               Rent Deposit
-                              <div class="col col-2"></div><input type="number" placeholder="{{data.a}}" ng-model="data.a">
+                              <div class="col col-2"></div><input type="number" placeholder="{{data.irent}}" ng-model="data.irent">
                             </div>
                         </label>
 
                         <div class="col">
                         <label class="item">
-                          Computer and Office Equipment<input type="number" placeholder="{{data.b}}" ng-model="data.b">
+                          Computer and Office Equipment<input type="number" placeholder="{{data.computer}}" ng-model="data.computer">
                         </div>
                         </label>
 
                         <div class="col">
                         <label class="item">
-                          Starting Inventory,Raw Materials and Tools<input type="number" placeholder="{{data.c}}" ng-model="data.c">
+                          Starting Inventory,Raw Materials and Tools<input type="number" placeholder="{{data.tools}}" ng-model="data.tools">
                         </div>
                         </label>
 
                         <div class="col">
                         <label class="item">
-                          Office Supplies<input type="number" placeholder="{{data.d}}" ng-model="data.d">
+                          Office Supplies<input type="number" placeholder="{{data.offsupp}}" ng-model="data.offsupp">
                         </div>
                         </label>
 
                         <div class="col">
                         <label class="item">
-                          Pre Operating Market<input type="number" placeholder="{{data.e}}" ng-model="data.e">
+                          Pre Operating Market<input type="number" placeholder="{{data.preoperating}}" ng-model="data.preoperating">
                         </div>
                         </label>
                     </form>
           <div class="col">
-            <label class="item item-positive item-floating-label" id="result">Total<br>
-              {{result()}}
+            <label class="item item-positive item-floating-label" id="infraresult">Total<br>
+              {{infraresult()}}
             </label>
           </div>
           <div class="col">
-          Rent Deposit = {{data.a}}</div>
+          Rent Deposit = {{data.irent}}</div>
             <div class="col">
-          Computer and Office Equipment = {{data.b}}</div>
+          Computer and Office Equipment = {{data.computer}}</div>
           <div class="col">
-          Starting Inventory,Raw Materials and Tools = {{data.c}}</div>
-        <div class="col">  Office Supplies = {{data.d}}</div>
-        <div class="col">  Pre Operating Market = {{data.e}}</div>
-          <div class="col">Total = {{result()}}</div>
+          Starting Inventory,Raw Materials and Tools = {{data.tools}}</div>
+        <div class="col">  Office Supplies = {{data.offsupp}}</div>
+        <div class="col">  Pre Operating Market = {{data.preoperating}}</div>
+          <div class="col">Total = {{infraresult()}}</div>
           <button type="submit" class="button button-block button-calm">Save</button>
         <a class="button button-block button-positive" href="#/app/initialsub2">Next</a>
-        </div>
           </ion-content>
 </ion-view>

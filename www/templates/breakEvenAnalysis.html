@@ -1,19 +1,38 @@
 <ion-view view-title="Break Even Analysis">
   <ion-content>
     <h1>Break Even Analysis</h1>
-    <form ng-submit="">
-                    <div class="list list-inset">
-                        <label class="item item-input">
-                            <textarea ng-model="task1.content" rows="2" placeholder="Fixed Cost"></textarea>
-                        </label>
-                        <label class="item item-input">
-                            <textarea ng-model="task2.content" rows="2" placeholder="Variable cost per unit"></textarea>
-                        </label>
-                        <label class="item item-input">
-                            <textarea ng-model="task3.content" rows="2" placeholder="Unit price"></textarea>
-                        </label>
+
+      <form ng-submit="">
+                              <div class="col">
+                              <label class="item">
+                                Fixed cost
+                                <div class="col col-2"></div><input type="number" placeholder="{{data.fixed}}" ng-model="data.fixed">
+                              </div>
+                          </label>
+
+                          <div class="col">
+                          <label class="item">
+                            Variable cost per unit<input type="number" placeholder="{{data.varcost}}" ng-model="data.varcost">
+                          </div>
+                          </label>
+
+                          <div class="col">
+                          <label class="item">
+                            Unit Price<input type="number" placeholder="{{data.unitprice}}" ng-model="data.unitprice">
+                          </div>
+                          </label>
+        </form>
+
+  <div class="col">
+        <label class="item item-positive item-floating-label" id="breakeven">BreakEven Q <br>
+          {{breakeven()}}
+        </label>
+      </div>
+
+            <div class="col">Breakeven Q = {{breakeven()}}</div>
+
                     <button type="submit" class="button button-block button-positive">Calculate</button>
-                    </div>
-                </form>
+
+
 </ion-content>
 </ion-view>

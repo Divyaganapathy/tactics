@@ -163,6 +163,42 @@ angular.module('tactics', ['ionic', 'tactics.controllers'])
                                 }
                               })
 
+                              .state('app.price', {
+                                  url: '/price',
+                                  views: {
+                                    'menuContent': {
+                                      templateUrl: 'templates/price.html'
+                                    }
+                                  }
+                                })
+
+                                .state('app.place', {
+                                    url: '/place',
+                                    views: {
+                                      'menuContent': {
+                                        templateUrl: 'templates/place.html'
+                                      }
+                                    }
+                                  })
+
+                                  .state('app.product', {
+                                      url: '/product',
+                                      views: {
+                                        'menuContent': {
+                                          templateUrl: 'templates/product.html'
+                                        }
+                                      }
+                                    })
+
+                                    .state('app.promotion', {
+                                        url: '/promotion',
+                                        views: {
+                                          'menuContent': {
+                                            templateUrl: 'templates/promotion.html'
+                                          }
+                                        }
+                                      })
+
     .state('app.playlists', {
       url: '/playlists',
       views: {
