@@ -1,0 +1,16 @@
+<ion-view view-title="price">
+  <ion-content>
+    <h1>Marketing Mix</h1>
+<h2>Four Ps</h2>
+<h2>Price</h2>
+  <div class="list">
+        <ion-checkbox ng-repeat="item in priceList"
+                      ng-model="item.checked"
+                      ng-checked="item.checked">
+          {{ item.text }}
+        </ion-checkbox>
+        </div>
+        <button type="submit" class="button button-block button-calm">Save</button>
+      <a class="button button-block button-positive" href="#/app/promotion">Next</a>
+  </ion-content>
+</ion-view>
