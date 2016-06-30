@@ -2,28 +2,55 @@
   <ion-content>
     <h2>Infrastructure Expenses</h2>
     <form ng-submit="">
-                    <div class="list list-inset">
-                        <label ng-model="task.title">
-                                              </label>
-                        <label class="item item-input">
-                            <textarea ng-model="task.content1" rows="1" placeholder="Rent"></textarea>
+                            <div class="col">
+                            <label class="item">
+                              Rent
+                              <div class="col col-2"></div><input type="number" placeholder="{{data.rent}}" ng-model="data.rent">
+                            </div>
                         </label>
-                        <label class="item item-input">
-                            <textarea ng-model="task.content2" rows="1" placeholder="Equipments lease"></textarea>
+                        <div class="col">
+                        <label class="item">
+                          Equipments lease<input type="number" placeholder="{{data.equip}}" ng-model="data.equip">
+                        </div>
                         </label>
-                        <label class="item item-input">
-                            <textarea ng-model="task.content3" rows="1" placeholder="Inventory"></textarea>
+
+                        <div class="col">
+                        <label class="item">
+                          Inventory<input type="number" placeholder="{{data.inventory}}" ng-model="data.inventory">
+                        </div>
                         </label>
-                        <label class="item item-input">
-                            <textarea ng-model="task.content4" rows="1" placeholder="Supplies"></textarea>
+
+                        <div class="col">
+                        <label class="item">
+                          Supplies<input type="number" placeholder="{{data.supplies}}" ng-model="data.supplies">
+                        </div>
                         </label>
-                        <label class="item item-input">
-                            <textarea ng-model="task.content5" rows="1" placeholder="Utilities"></textarea>
+
+                        <div class="col">
+                        <label class="item">
+                          Utilities<input type="number" placeholder="{{data.utilities}}" ng-model="data.utilities">
+                        </div>
                         </label>
+                    </form>
+
+                    <div class="col">
+                      <label class="item item-positive item-floating-label" id="infrasum">Total<br>
+                        {{infrasum()}}
+                      </label>
+                    </div>
+                    <div class="col">
+                    Rent = {{data.rent}}</div>
+                      <div class="col">
+                    Equipments lease = {{data.equip}}</div>
+                    <div class="col">
+                    Inventory = {{data.inventory}}</div>
+                  <div class="col"> Supplies = {{data.supplies}}</div>
+                  <div class="col">  Utilities = {{data.utilities}}</div>
+                    <div class="col">Total = {{infrasum()}}</div>        
+
                       <button type="submit" class="button button-block button-calm">Save</button>
                         <a class="button button-block button-positive" href="#/app/monthlysub2">Next</a>
 
-                    </div>
-                </form>
+
   </ion-content>
 </ion-view>

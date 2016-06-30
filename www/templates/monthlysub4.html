@@ -1,29 +1,56 @@
 <ion-view view-title="Monthly Expenses">
   <ion-content>
-    <h2>Company Expenses</h2>
+    <h2>Communication Expenses</h2>
     <form ng-submit="">
-                    <div class="list list-inset">
+                            <div class="col">
+                            <label class="item">
+                            Advertising
+                              <div class="col col-2"></div><input type="number" placeholder="{{data.adv}}" ng-model="data.adv">
+                            </div>
+                        </label>
+                        <div class="col">
+                        <label class="item">
+                          Telephone<input type="number" placeholder="{{data.tele}}" ng-model="data.tele">
+                        </div>
+                        </label>
 
-                  <label ng-model="task3.title">
+                        <div class="col">
+                        <label class="item">
+                          Internet Connection<input type="number" placeholder="{{data.internet}}" ng-model="data.internet">
+                        </div>
+                        </label>
 
-                  </label>
-                  <label class="item item-input">
-                      <textarea ng-model="task3.content1" rows="1" placeholder="Advertising"></textarea>
-                  </label>
-                  <label class="item item-input">
-                      <textarea ng-model="task3.content2" rows="1" placeholder="Telephone"></textarea>
-                  </label>
-                  <label class="item item-input">
-                      <textarea ng-model="task3.content3" rows="1" placeholder="Internet Connection"></textarea>
-                  </label>
-                  <label class="item item-input">
-                      <textarea ng-model="task3.content4" rows="1" placeholder="Website hosting"></textarea>
-                  </label>
-                  <label class="item item-input">
-                      <textarea ng-model="task3.content5" rows="1" placeholder="Others"></textarea>
-                  </label>
-                <button type="submit" class="button button-block button-calm">Save</button>
+                        <div class="col">
+                        <label class="item">
+                          Website hosting<input type="number" placeholder="{{data.webhost}}" ng-model="data.webhost">
+                        </div>
+                        </label>
+
+                        <div class="col">
+                        <label class="item">
+                          Others<input type="number" placeholder="{{data.otherss}}" ng-model="data.otherss">
+                        </div>
+                        </label>
+                    </form>
+
+                    <div class="col">
+                      <label class="item item-positive item-floating-label" id="commsum">Total<br>
+                        {{commsum()}}
+                      </label>
                     </div>
-                </form>
+                    <div class="col">
+                    Advertising = {{data.adv}}</div>
+                      <div class="col">
+                    Telephone = {{data.tele}}</div>
+                    <div class="col">
+                    Internet Connection = {{data.internet}}</div>
+                  <div class="col"> Website hosting = {{data.webhost}}</div>
+                  <div class="col">  Others = {{data.otherss}}</div>
+                    <div class="col">Total = {{commsum()}}</div>
+
+
+
+                <button type="submit" class="button button-block button-calm">Save</button>
+
   </ion-content>
 </ion-view>
