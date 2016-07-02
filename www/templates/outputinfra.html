@@ -1,0 +1,22 @@
+<ion-view view-title="Intial Setup Cost">
+  <ion-content>
+    <h2>Infrastructure</h2>
+<div class="col">
+  <label class="item item-positive item-floating-label" id="infraresult">Total<br>
+    {{infraresult()}}
+  </label>
+</div>
+<div class="col">
+Rent Deposit = {{data.irent}}</div>
+  <div class="col">
+Computer and Office Equipment = {{data.computer}}</div>
+<div class="col">
+Starting Inventory,Raw Materials and Tools = {{data.tools}}</div>
+<div class="col">  Office Supplies = {{data.offsupp}}</div>
+<div class="col">  Pre Operating Market = {{data.preoperating}}</div>
+<div class="col">Total = {{infraresult()}}</div>
+
+  <a class="button button-balanced" href="#/app/outputiniex">Initial Expenses</a>
+    <a class="button button-positive" href="#/app/outputother">Other Expenses</a>
+</ion-content>
+</ion-view>

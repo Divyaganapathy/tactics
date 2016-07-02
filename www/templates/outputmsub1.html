@@ -1,0 +1,23 @@
+<ion-view view-title="Monthly Expenses">
+  <ion-content>
+    <h2>Infrastructure Expenses</h2>
+    <div class="col">
+      <label class="item item-positive item-floating-label" id="infrasum">Total<br>
+        {{infrasum()}}
+      </label>
+    </div>
+    <div class="col">
+    Rent = {{data.rent}}</div>
+      <div class="col">
+    Equipments lease = {{data.equip}}</div>
+    <div class="col">
+    Inventory = {{data.inventory}}</div>
+  <div class="col"> Supplies = {{data.supplies}}</div>
+  <div class="col">  Utilities = {{data.utilities}}</div>
+    <div class="col">Total = {{infrasum()}}</div>
+
+  <a class="button button-balanced" href="#/app/outputmsub2">Business and Legal Expenses</a>
+    <a class="button button-positive" href="#/app/outputmsub3">Salary and Taxes</a>
+      <a class="button button-positive" href="#/app/outputmsub4">Communication Expenses</a>
+</ion-content>
+</ion-view>

@@ -1,0 +1,23 @@
+<ion-view view-title="Monthly Expenses">
+  <ion-content>
+    <h2>Salary and Taxes</h2>
+    <div class="col">
+      <label class="item item-positive item-floating-label" id="taxsum">Total<br>
+        {{taxsum()}}
+      </label>
+    </div>
+    <div class="col">
+    Salary = {{data.salary}}</div>
+      <div class="col">
+    Payroll Tax = {{data.mpayroll}}</div>
+    <div class="col">
+    Interest and Principal on loan = {{data.loan}}</div>
+  <div class="col"> Taxes = {{data.taxes}}</div>
+  <div class="col">  Health = {{data.health}}</div>
+    <div class="col">Total = {{taxsum()}}</div>
+
+  <a class="button button-positive" href="#/app/outputmsub1">Infrastructure</a>
+  <a class="button button-positive" href="#/app/outputmsub2">Business and Legal Expenses</a>
+        <a class="button button-balanced" href="#/app/outputmsub4">Communication Expenses</a>
+</ion-content>
+</ion-view>
