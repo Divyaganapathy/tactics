@@ -132,7 +132,7 @@ angular.module('tactics.controllers', [])
     'moperating': 0,
     'legalsum': 0,
     'salary': 0,
-    'payroll': 0,
+    'mpayroll': 0,
     'loan': 0,
     'taxes': 0,
     'health': 0,
@@ -178,7 +178,7 @@ angular.module('tactics.controllers', [])
    };
 
    $scope.taxsum = function() {
-     $scope.data.taxsum = $scope.data.salary + $scope.data.payroll + $scope.data.loan + $scope.data.taxes + $scope.data.health;
+     $scope.data.taxsum = $scope.data.salary + $scope.data.mpayroll + $scope.data.loan + $scope.data.taxes + $scope.data.health;
      return $scope.data.taxsum;
    };
 
@@ -191,5 +191,11 @@ angular.module('tactics.controllers', [])
      $scope.data.breakeven = $scope.data.fixed / ($scope.data.unitprice - $scope.data.varcost);
      return $scope.data.breakeven;
    };
+
+   $scope.labels =["Infrastructure","Initial Expenses", "Other Expenses", "Total"];
+   $scope.data1 = [28,67,36,88];
+
+   $scope.labels1 =["Infrastructure Expenses","Business and Legal Expenses", "Salary and Taxes","Communication Expenses", "Total Monthly Expenses"];
+   $scope.data2 = [15,12,23,11,66];
 
   });

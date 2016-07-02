@@ -1,0 +1,26 @@
+<ion-view view-title="Intial Setup Cost">
+  <ion-content>
+    <h2>Other Expenses</h2>
+    <div class="col">
+      <label class="item item-positive item-floating-label" id="otherresult">Total<br>
+        {{otherresult()}}
+      </label>
+    </div>
+    <div class="col">
+      Logo Design = {{data.logoDesign}}</div>
+      <div class="col">
+    Website Design = {{data.websiteDesign}}</div>
+    <div class="col">
+    Payroll = {{data.payroll}}</div>
+  <div class="col"> Training = {{data.training}}</div>
+  <div class="col"> Others = {{data.others}}</div>
+    <div class="col">Total = {{otherresult()}}</div>
+
+      <a class="button button-calm" href="#/app/outputinfra">Infrastructure Expenses</a>
+        <a class="button button-calm" href="#/app/outputiniex">Initial Expenses</a>
+<br>
+<br>
+      <a class="button button-block button-balanced" href="#/app/monthlysub1">Monthly Expenses</a>
+        <a class="button button-block button-positive" href="#/app/home">HOME</a>
+</ion-content>
+</ion-view>

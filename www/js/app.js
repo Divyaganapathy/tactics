@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('tactics', ['ionic', 'tactics.controllers'])
+angular.module('tactics', ['ionic', 'tactics.controllers','chart.js'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -198,6 +198,95 @@ angular.module('tactics', ['ionic', 'tactics.controllers'])
                                           }
                                         }
                                       })
+
+
+
+                                      .state('app.outputinitial', {
+                                          url: '/outputinitial',
+                                          views: {
+                                            'menuContent': {
+                                              templateUrl: 'templates/outputinitial.html'
+                                            }
+                                          }
+                                        })
+
+                                        .state('app.outputinfra', {
+                                            url: '/outputinfra',
+                                            views: {
+                                              'menuContent': {
+                                                templateUrl: 'templates/outputinfra.html'
+                                              }
+                                            }
+                                          })
+
+                                          .state('app.outputiniex', {
+                                              url: '/outputiniex',
+                                              views: {
+                                                'menuContent': {
+                                                  templateUrl: 'templates/outputiniex.html'
+                                                }
+                                              }
+                                            })
+
+                                            .state('app.outputother', {
+                                                url: '/outputother',
+                                                views: {
+                                                  'menuContent': {
+                                                    templateUrl: 'templates/outputother.html'
+                                                  }
+                                                }
+                                              })
+
+
+
+                                        .state('app.outputmonthly', {
+                                            url: '/outputmonthly',
+                                            views: {
+                                              'menuContent': {
+                                                templateUrl: 'templates/outputmonthly.html'
+                                              }
+                                            }
+                                          })
+
+
+
+                                                                                      .state('app.outputmsub1', {
+                                                                                          url: '/outputmsub1',
+                                                                                          views: {
+                                                                                            'menuContent': {
+                                                                                              templateUrl: 'templates/outputmsub1.html'
+                                                                                            }
+                                                                                          }
+                                                                                        })
+
+
+                                                                                                                                    .state('app.outputmsub2', {
+                                                                                                                                        url: '/outputmsub2',
+                                                                                                                                        views: {
+                                                                                                                                          'menuContent': {
+                                                                                                                                            templateUrl: 'templates/outputmsub2.html'
+                                                                                                                                          }
+                                                                                                                                        }
+                                                                                                                                      })
+
+                                                                                                                                                                                  .state('app.outputmsub3', {
+                                                                                                                                                                                      url: '/outputmsub3',
+                                                                                                                                                                                      views: {
+                                                                                                                                                                                        'menuContent': {
+                                                                                                                                                                                          templateUrl: 'templates/outputmsub3.html'
+                                                                                                                                                                                        }
+                                                                                                                                                                                      }
+                                                                                                                                                                                    })
+
+                                                                                                                                                                                                                                .state('app.outputmsub4', {
+                                                                                                                                                                                                                                    url: '/outputmsub4',
+                                                                                                                                                                                                                                    views: {
+                                                                                                                                                                                                                                      'menuContent': {
+                                                                                                                                                                                                                                        templateUrl: 'templates/outputmsub4.html'
+                                                                                                                                                                                                                                      }
+                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                  })
+
 
     .state('app.playlists', {
       url: '/playlists',

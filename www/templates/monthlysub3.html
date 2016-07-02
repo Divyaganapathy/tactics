@@ -10,7 +10,7 @@
                         </label>
                         <div class="col">
                         <label class="item">
-                          Payroll Tax<input type="number" placeholder="{{data.payroll}}" ng-model="data.payroll">
+                          Payroll Tax<input type="number" placeholder="{{data.mpayroll}}" ng-model="data.mpayroll">
                         </div>
                         </label>
 
@@ -33,24 +33,8 @@
                         </label>
                     </form>
 
-                    <div class="col">
-                      <label class="item item-positive item-floating-label" id="taxsum">Total<br>
-                        {{taxsum()}}
-                      </label>
-                    </div>
-                    <div class="col">
-                    Salary = {{data.salary}}</div>
-                      <div class="col">
-                    Payroll Tax = {{data.payroll}}</div>
-                    <div class="col">
-                    Interest and Principal on loan = {{data.loan}}</div>
-                  <div class="col"> Taxes = {{data.taxes}}</div>
-                  <div class="col">  Health = {{data.health}}</div>
-                    <div class="col">Total = {{taxsum()}}</div>
 
-
-                  <button type="submit" class="button button-block button-calm">Save</button>
-                  <a class="button button-block button-positive" href="#/app/monthlysub4">Next</a>
+                  <a type="submit" class="button button-block button-positive" href="#/app/monthlysub4">Next</a>
 
 
   </ion-content>
