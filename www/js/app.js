@@ -76,6 +76,52 @@ angular.module('tactics', ['ionic', 'tactics.controllers','chart.js'])
               }
             }
           })
+
+          .state('app.swotoutput', {
+              url: '/swotoutput',
+              views: {
+                'menuContent': {
+                  templateUrl: 'templates/swotoutput.html'
+                }
+              }
+            })
+
+            .state('app.strength', {
+                url: '/strength',
+                views: {
+                  'menuContent': {
+                    templateUrl: 'templates/strength.html'
+                  }
+                }
+              })
+
+              .state('app.weakness', {
+                  url: '/weakness',
+                  views: {
+                    'menuContent': {
+                      templateUrl: 'templates/weakness.html'
+                    }
+                  }
+                })
+
+                .state('app.opportunities', {
+                    url: '/opportunities',
+                    views: {
+                      'menuContent': {
+                        templateUrl: 'templates/opportunities.html'
+                      }
+                    }
+                  })
+
+                  .state('app.threats', {
+                      url: '/threats',
+                      views: {
+                        'menuContent': {
+                          templateUrl: 'templates/threats.html'
+                        }
+                      }
+                    })
+
           .state('app.marketingMix', {
               url: '/marketingMix',
               views: {
@@ -84,6 +130,43 @@ angular.module('tactics', ['ionic', 'tactics.controllers','chart.js'])
                 }
               }
             })
+
+            .state('app.outputproduct', {
+                url: '/outputproduct',
+                views: {
+                  'menuContent': {
+                    templateUrl: 'templates/outputproduct.html'
+                  }
+                }
+              })
+
+              .state('app.outputprice', {
+                  url: '/outputprice',
+                  views: {
+                    'menuContent': {
+                      templateUrl: 'templates/outputprice.html'
+                    }
+                  }
+                })
+
+                .state('app.outputpromotion', {
+                    url: '/outputpromotion',
+                    views: {
+                      'menuContent': {
+                        templateUrl: 'templates/outputpromotion.html'
+                      }
+                    }
+                  })
+
+                  .state('app.outputplace', {
+                      url: '/outputplace',
+                      views: {
+                        'menuContent': {
+                          templateUrl: 'templates/outputplace.html'
+                        }
+                      }
+                    })
+
             .state('app.initialSetupCost', {
                 url: '/initialSetupCost',
                 views: {
