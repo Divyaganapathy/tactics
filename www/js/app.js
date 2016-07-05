@@ -246,6 +246,16 @@ angular.module('tactics', ['ionic', 'tactics.controllers','chart.js'])
                                 }
                               })
 
+
+                              .state('app.breakevenoutput', {
+                                  url: '/breakevenoutput',
+                                  views: {
+                                    'menuContent': {
+                                      templateUrl: 'templates/breakevenoutput.html'
+                                    }
+                                  }
+                                })
+                                
                               .state('app.price', {
                                   url: '/price',
                                   views: {

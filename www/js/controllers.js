@@ -42,8 +42,75 @@ angular.module('tactics.controllers', [])
 
 
 
+  $scope.strengthList = [
+    { text: "1. Does your company have technological advantages?", checked: false },
+    { text: "2. Do you perform better than your competitiors?", checked: false },
+    { text: "3. Are you strategically well placed within your sector?", checked: false },
+    { text: "4. Do you have features that your customers perceive as your strength?", checked: false },
+    { text: "5. Does your company have factors that faciliate possible sales?", checked: false }
+  ];
+
+  $scope.pushNotificationChange = function() {
+    console.log('Push Notification Change', $scope.pushNotification.checked);
+  };
+
+  $scope.pushNotification = { checked: true };
+  $scope.checkedCount=function(){return $scope.data.filter(function(person){return person.checked;}).length;}
+
+
+
+  $scope.weaknessList = [
+    { text: "1. Are the activities performed by your company weaker than required?", checked: false },
+    { text: "2. Do you waste your resources which are your strength?", checked: false },
+    { text: "3. Does your company have factors than customer perceive as weakness?", checked: false },
+    { text: "4. Do you think your product/service can be improved?", checked: false },
+    { text: "5. Does you perform unneccessary activites that could be avoided?", checked: false }
+  ];
+
+  $scope.pushNotificationChange = function() {
+    console.log('Push Notification Change', $scope.pushNotification.checked);
+  };
+
+  $scope.pushNotification = { checked: true };
+  $scope.checkedCount=function(){return $scope.data.filter(function(person){return person.checked;}).length;}
+
+
+  $scope.opportunitiesList = [
+    { text: "1. Does your company have good business opportunities?", checked: false },
+    { text: "2. Are there needs that your clients have but are not offered by your competitors?", checked: false },
+    { text: "3. Is there scope for technological development in the market?", checked: false },
+    { text: "4. Is there a possibility for political or legal changes in the market?", checked: false },
+    { text: "5. Is there scope for other changes that will favour your range of products?", checked: false }
+  ];
+
+  $scope.pushNotificationChange = function() {
+    console.log('Push Notification Change', $scope.pushNotification.checked);
+  };
+
+  $scope.pushNotification = { checked: true };
+  $scope.checkedCount=function(){return $scope.data.filter(function(person){return person.checked;}).length;}
+
+
+
+  $scope.threatsList = [
+    { text: "1. Are there tendencies that could menace the exitence of your company/product/services?", checked: false },
+    { text: "2. Are your competitors improving the products/services better than you?", checked: false },
+    { text: "3. Do you face obstacles in the functioning of your company?", checked: false },
+    { text: "4. Does technological changes threaten your company's position?", checked: false },
+    { text: "5. Do you face issues regarding capital resources?", checked: false }
+  ];
+
+  $scope.pushNotificationChange = function() {
+    console.log('Push Notification Change', $scope.pushNotification.checked);
+  };
+
+  $scope.pushNotification = { checked: true };
+  $scope.checkedCount=function(){return $scope.data.filter(function(person){return person.checked;}).length;}
+
+
+
   $scope.productList = [
-    { text: "1. Does your company produce variety of products in order to meet customer satisfaction?", checked: true },
+    { text: "1. Does your company produce variety of products in order to meet customer satisfaction?", checked: false },
     { text: "2. Does your brand name influence company sales?", checked: false },
     { text: "3. Do your products meet customer's requirement?", checked: false },
     { text: "4. Do customers complain about quality of products?", checked: false },
@@ -56,10 +123,11 @@ angular.module('tactics.controllers', [])
   };
 
   $scope.pushNotification = { checked: true };
+  $scope.checkedCount=function(){return $scope.data.filter(function(person){return person.checked;}).length;}
 
 
   $scope.priceList = [
-    { text: "1. Do you allow for discounts of your products?", checked: true },
+    { text: "1. Do you allow for discounts of your products?", checked: false },
     { text: "2. Are the prices of the products appropriate?", checked: false },
     { text: "3. Does your pricing decisions allow for payment period?", checked: false },
     { text: "4. Does your pricing strategy give room for large customer bases?", checked: false },
@@ -74,7 +142,7 @@ angular.module('tactics.controllers', [])
   $scope.pushNotification = { checked: true };
 
   $scope.promotionList = [
-    { text: "1. Do the people know your products based on promotional strategy?", checked: true },
+    { text: "1. Do the people know your products based on promotional strategy?", checked: false },
     { text: "2. Does your organization apply sales promotion as one of the promotion strategies?", checked: false },
     { text: "3. Does your organization apply advertising promotion as one of the promotion strategies?", checked: false },
     { text: "4. Does your organization apply selling promotion as one of the promotion strategies?", checked: false },
@@ -88,7 +156,7 @@ angular.module('tactics.controllers', [])
   $scope.pushNotification = { checked: true };
 
   $scope.placeList = [
-    { text: "1. Do your products get to target the customers?", checked: true },
+    { text: "1. Do your products get to target the customers?", checked: false },
     { text: "2. Does the location of products aid accessibility?", checked: false },
     { text: "3. Is channel coverage effective?", checked: false },
     { text: "4. Is transportation effective?", checked: false },
@@ -146,7 +214,23 @@ angular.module('tactics.controllers', [])
     'fixed': 0,
     'varcost': 0,
     'unitprice': 0,
-    'breakeven': 0
+    'breakeven': 0,
+    'target': 0,
+    'budget': 0,
+    'dos': 0,
+    'dof': 0,
+    'target1': 0,
+    'budget1': 0,
+    'dos1': 0,
+    'dof1': 0,
+    'target2': 0,
+    'budget2': 0,
+    'dos2': 0,
+    'dof2': 0,
+    'target3': 0,
+    'budget3': 0,
+    'dos3': 0,
+    'dof3': 0
   };
 
   $scope.infraresult = function() {
@@ -197,5 +281,6 @@ angular.module('tactics.controllers', [])
 
    $scope.labels1 =["Infrastructure Expenses","Business and Legal Expenses", "Salary and Taxes","Communication Expenses", "Total Monthly Expenses"];
    $scope.data2 = [15,12,23,11,66];
+
 
   });
