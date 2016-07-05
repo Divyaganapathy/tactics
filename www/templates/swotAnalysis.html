@@ -2,200 +2,48 @@
   <ion-content>
     <h1>SWOT Analysis</h1>
 <h2>Strength</h2>
-<div class="list list-inset">
 
-    <div class="item">
-      1. Does your company have technological advantages?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-    <div class="item">
-      2. Do you perform better than your competitiors?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-    <div class="item">
-      3. Are you strategically well placed within your sector?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-    <div class="item">
-      4. Do you have features that your customers perceive as your strength?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-    <div class="item">
-      5. Does your company have factors that faciliate possible sales?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-</div>
-<h2>Weakness</h2>
-<div class="list list-inset">
+  <div class="list">
+        <ion-checkbox ng-repeat="item in strengthList"
+                      ng-model="item.checked"
+                      ng-checked="item.checked">
+          {{ item.text }}
+        </ion-checkbox>
+        <p> Strength : {{((strengthList|filter:{checked:true}).length/5)*100}}%</p>
 
-    <div class="item">
-      1. Are the activities performed by your company weaker than required?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-    <div class="item">
-      2. Do you waste your resources which are your strength?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-    <div class="item">
-      3. Does your company have factors than customer perceive as weakness?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-    <div class="item">
-      4. Do you think your product/service can be improved?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-    <div class="item">
-      5. Does you perform unncecessary activites that could be avoided?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-</div>
-<h2>Opportunities</h2>
-<div class="list list-inset">
+        </div>
+        <div class="list">
+              <ion-checkbox ng-repeat="item in weaknessList"
+                            ng-model="item.checked"
+                            ng-checked="item.checked">
+                {{ item.text }}
+              </ion-checkbox>
+              <p> Weakness : {{((weaknessList|filter:{checked:true}).length/5)*100}}%</p>
 
-    <div class="item">
-      1. Does your company have good business opportunities?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-    <div class="item">
-      2. Are there needs that your clients have but are not offered by your competitors?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-    <div class="item">
-      3. Is there scope for technological development in the market?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-    <div class="item">
-      4. Is there a possibility for political or legal changes in the market?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-    <div class="item">
-      5. Is there scope for other changes that will favour your range of products?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-</div>
-<h2>Threats</h2>
-<div class="list list-inset">
-    <div class="item">
-      1. Are there tendencies that could menace the exitence of your company/product/services?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-    <div class="item">
-      2. Are your competitors improving the products/services better than you?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-    <div class="item">
-      3. Do you face obstacles in the functioning of your company?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-    <div class="item">
-      4. Does technological changes threaten your company's position?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-    <div class="item">
-      5. Do you face issues regarding capital resources?
-      <label class="toggle">
-       <input type="checkbox">
-       <div class="track">
-         <div class="handle"></div>
-       </div>
-    </label>
-    </div>
-</div>
+              </div>
+
+        <div class="list">
+              <ion-checkbox ng-repeat="item in opportunitiesList"
+                            ng-model="item.checked"
+                            ng-checked="item.checked">
+                {{ item.text }}
+              </ion-checkbox>
+              <p> Opportunities : {{((opportunitiesList|filter:{checked:true}).length/5)*100}}%</p>
+
+              </div>
+              <div class="list">
+                    <ion-checkbox ng-repeat="item in threatsList"
+                                  ng-model="item.checked"
+                                  ng-checked="item.checked">
+                      {{ item.text }}
+                    </ion-checkbox>
+                    <p> Threats : {{((threatsList|filter:{checked:true}).length/5)*100}}%</p>
+
+                    </div>
+
+
+
+
   <a type="submit" class="button button-block button-positive" href="#/app/swotoutput">Calculate SWOT</a>
 </ion-content>
 </ion-view>
