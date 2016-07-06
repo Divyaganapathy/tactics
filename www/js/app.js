@@ -85,7 +85,14 @@ angular.module('tactics', ['ionic', 'tactics.controllers','chart.js','ngStorage'
                 }
               }
             })
-
+            .state('app.swotch', {
+                url: '/swotch',
+                views: {
+                  'menuContent': {
+                    templateUrl: 'templates/swotch.html'
+                  }
+                }
+              })
             .state('app.strength', {
                 url: '/strength',
                 views: {
@@ -210,6 +217,14 @@ angular.module('tactics', ['ionic', 'tactics.controllers','chart.js','ngStorage'
                           }
                         }
                       })
+                      .state('app.outputinfrach', {
+                          url: '/outputinfrach',
+                          views: {
+                            'menuContent': {
+                              templateUrl: 'templates/outputinfrach.html'
+                            }
+                          }
+                        })
 
                       .state('app.monthlysub1', {
                           url: '/monthlysub1',
@@ -329,7 +344,14 @@ angular.module('tactics', ['ionic', 'tactics.controllers','chart.js','ngStorage'
                                                   }
                                                 }
                                               })
-
+                                              .state('app.outputmonch', {
+                                                  url: '/outputmonch',
+                                                  views: {
+                                                    'menuContent': {
+                                                      templateUrl: 'templates/outputmonch.html'
+                                                    }
+                                                  }
+                                                })
 
 
                                         .state('app.outputmonthly', {

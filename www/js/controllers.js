@@ -43,12 +43,12 @@ angular.module('tactics.controllers', [])
 
 
   $scope.strengthList = [
-    { text: "1. Does your company have technological advantages?", checked: false },
-    { text: "2. Do you perform better than your competitiors?", checked: false },
-    { text: "3. Are you strategically well placed within your sector?", checked: false },
-    { text: "4. Do you have features that your customers perceive as your strength?", checked: false },
-    { text: "5. Does your company have factors that faciliate possible sales?", checked: false }
-  ];
+      { id: 1, text: "1. Does your company have technological advantages?", suggestion: "s1, s2, s3", checked: false },
+      { id: 2, text: "2. Do you perform better than your competitiors?", suggestion: "s4, s5, s6", checked: false },
+      { id: 3, text: "3. Are you strategically well placed within your sector?", suggestion: "s7, s8, s9", checked: false },
+      { id: 4, text: "4. Do you have features that your customers perceive as your strength?", suggestion: "s10, s12, s13", checked: false },
+      { id: 5, text: "5. Does your company have factors that faciliate possible sales?", suggestion: "s21, s22, s23", checked: false }
+    ];
 
   $scope.pushNotificationChange = function() {
     console.log('Push Notification Change', $scope.pushNotification.checked);
@@ -107,8 +107,7 @@ angular.module('tactics.controllers', [])
   $scope.pushNotification = { checked: true };
   $scope.checkedCount=function(){return $scope.data.filter(function(person){return person.checked;}).length;}
 
-  $scope.labels3 =["Strength","Weakness", "Opportunities", "Threats"];
-  $scope.data3 = [15,12,23,11,66];
+
 
 
 
@@ -233,7 +232,9 @@ angular.module('tactics.controllers', [])
     'target3': 0,
     'budget3': 0,
     'dos3': 0,
-    'dof3': 0
+    'dof3': 0,
+    'totalini': 0,
+    'totalmon': 0
   };
 
   $scope.infraresult = function() {
@@ -252,6 +253,10 @@ angular.module('tactics.controllers', [])
     return $scope.data.oresult;
   };
 
+  $scope.totalini = function() {
+    $scope.data.totalini = $scope.data.infraresult + $scope.data.iresult + $scope.data.oresult;
+    return $scope.data.totalini;
+  };
 
   $scope.infrasum = function() {
      $scope.data.infrasum = $scope.data.rent + $scope.data.equip + $scope.data.inventory + $scope.data.supplies + $scope.data.utilities;
@@ -273,7 +278,10 @@ angular.module('tactics.controllers', [])
      $scope.data.commsum = $scope.data.adv + $scope.data.tele + $scope.data.internet + $scope.data.webhost + $scope.data.otherss;
      return $scope.data.commsum;
    };
-
+   $scope.totalmon = function() {
+     $scope.data.totalmon = $scope.data.infrasum +$scope.data.legalsum + $scope.data.taxsum + $scope.data.commsum;
+     return $scope.data.totalmon;
+   };
    $scope.breakeven = function() {
      $scope.data.breakeven = $scope.data.fixed / ($scope.data.unitprice - $scope.data.varcost);
      return $scope.data.breakeven;
@@ -294,11 +302,23 @@ angular.module('tactics.controllers', [])
         $scope.data = $localStorage.data;
       }
 
-   $scope.labels =["Infrastructure","Initial Expenses", "Other Expenses", "Total"];
-   $scope.data1 = [28,67,36,88];
+
+
+
+
+
+
+   $scope.labels =["Infrastructure","Initial Expenses", "Other Expenses","Total"];
+   $scope.data5 =[$scope.data.infraresult,$scope.data.iresult,$scope.data.oresult,$scope.data.infraresult + $scope.data.iresult + $scope.data.oresult];
+  //$scope.data1 = [28,67,36,88];
+$scope.reload = function() {location.reload();}
 
    $scope.labels1 =["Infrastructure Expenses","Business and Legal Expenses", "Salary and Taxes","Communication Expenses", "Total Monthly Expenses"];
-   $scope.data2 = [15,12,23,11,66];
+ $scope.data6 =[$scope.data.infrasum,$scope.data.legalsum,$scope.data.taxsum,$scope.data.commsum,$scope.data.infrasum + $scope.data.legalsum + $scope.data.taxsum + $scope.data.commsum];
+  // $scope.data6 = [15,12,23,11,66];
+
+   $scope.labels2 =["Strength","Weakness", "Opportunities","Threats"];
+   $scope.data3 = [15,12,23,11];
 
    //Store an object
    $scope.storeObject = function() {
