@@ -1,6 +1,6 @@
 angular.module('tactics.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $localStorage) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -106,6 +106,9 @@ angular.module('tactics.controllers', [])
 
   $scope.pushNotification = { checked: true };
   $scope.checkedCount=function(){return $scope.data.filter(function(person){return person.checked;}).length;}
+
+  $scope.labels3 =["Strength","Weakness", "Opportunities", "Threats"];
+  $scope.data3 = [15,12,23,11,66];
 
 
 
@@ -275,6 +278,21 @@ angular.module('tactics.controllers', [])
      $scope.data.breakeven = $scope.data.fixed / ($scope.data.unitprice - $scope.data.varcost);
      return $scope.data.breakeven;
    };
+   //Store an object
+      $scope.storeObject = function() {
+        if(typeof(Storage) != "undefined") {
+
+            $localStorage.data =  $scope.data;
+
+            alert("Data stored!");
+        } else {
+            alert("LocalStorage not supported!");
+        }
+      };
+      //Read an object
+      if($localStorage.data !== undefined) {
+        $scope.data = $localStorage.data;
+      }
 
    $scope.labels =["Infrastructure","Initial Expenses", "Other Expenses", "Total"];
    $scope.data1 = [28,67,36,88];
