@@ -1,23 +1,13 @@
 <ion-view view-title="Strength">
   <ion-content>
     <h2>Strength</h2>
-    <div class="list list-inset">
-        <div class="item">
-          1.  tendencies that could menace the exitence of your company/product
-        </div>
-        <div class="item">
-          2.  competitors improving the products/services better than you
-          </div>
-        <div class="item">
-          3.  obstacles in the functioning of your company
-          </div>
-        <div class="item">
-          4.  technological changes
-            </div>
-        <div class="item">
-          5.  capital resources
-          </div>
-    </div>
+  
+
+      <div class="list list-inset>   <div class="item" ng-repeat="item in strengthList">
+                              {{ item.suggestion }}
+  </div>
+
+
 
   <a class="button button-balanced" href="#/app/weakness">Weakness</a>
   <a class="button button-positive" href="#/app/opportunities">Opportunities</a>

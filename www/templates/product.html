@@ -9,6 +9,7 @@
                       ng-checked="item.checked">
           {{ item.text }}
         </ion-checkbox>
+        <p> total checked:{{(productList|filter:{checked:true}).length}}</p>
         </div>
       <a class="button button-block button-positive" href="#/app/outputproduct">Save</a>
       <a class="button button-block button-positive" href="#/app/price">Next</a>
