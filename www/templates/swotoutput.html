@@ -28,14 +28,9 @@
     {{((threatsList|filter:{checked:true}).length/5)*100}}%
     </label>
   </div>
-
-<div class="card">
-<div class="item item-divider">
-  SWOT ANALYSIS
-</div>
-<div class="item item-text-wrap">
-  <canvas id="pie" class="chart chart-pie" data="data2" labels="labels1" legend="true" series="series" options="{showTooltips: false}"></canvas>
-  </div>
-  </div>
+  <button class="button button-full button-positive" ng-click="storeObject()">
+           Save
+        </button>
+<a class="button button-block button-positive" href="#/app/swotch" ng-click="reload()">Click to view chart</a>
 </ion-content>
 </ion-view>

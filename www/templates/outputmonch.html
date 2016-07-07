@@ -15,7 +15,14 @@
       <button class="button button-full button-positive" ng-click="storeObject()">
                Save total
             </button>
-  <a class="button button-block button-positive" href="#/app/outputmonch" ng-click="reload()">Click to view chart</a>
 
+<div class="card">
+<div class="item item-divider">
+  Monthly Expenses
+</div>
+<div class="item item-text-wrap">
+    <canvas id="polar-area" class="chart chart-polar-area" data="data6" labels="labels1" legend="true"  options="{showTooltips: true}"></canvas>
+  </div>
+  </div>
 </ion-content>
 </ion-view>
