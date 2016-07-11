@@ -269,16 +269,6 @@ $scope.reload = function() {location.reload();}
      $scope.data = $localStorage.data;
    }
 
-
- $scope.$storage =  $localStorage.$default({
-           swot: {},
-           mix: {}
-         });
-         $scope.checkcount=function(){$scope.cc=$filter('filter')($scope.strengthList,{checked:true})};
-            $scope.chipsColores = function () {
-                    $scope.fav = $filter('filter')($scope.$storage.strengthList, {checked: true});
-            };
-
    $scope.$storage =  $localStorage.$default({
              swot: {},
              mix: {}
@@ -328,7 +318,6 @@ threatsList : [
   { text: "5. Do you face issues regarding capital resources?", suggestion: "t5", checked: false }
 ]
 });
-
 
 
 

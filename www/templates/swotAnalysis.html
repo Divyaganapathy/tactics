@@ -2,14 +2,13 @@
   <ion-content>
     <h1>SWOT Analysis</h1>
 <h2>Strength</h2>
-
 <div class="list">
 <div ng-repeat="item in $storage.strengthList" >
       <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="strengthFilter()" ng-click="$storage.st = fav" >
        <label>{{item.text}}</label>
      </div>
  </ion-checkbox></div>
- <div ng-repeat="strength in $storage.b">
+ <div ng-repeat="strength in $storage.st">
                   Strength: {{strength.suggestion}}
           </div>
 <p> Strength : {{(($storage.strengthList|filter:{checked:true}).length/5)*100}}%</p>
@@ -29,7 +28,7 @@
 <h2>Opportunities</h2>
 <div class="list">
 <div ng-repeat="item in $storage.opportunitiesList" >
-      <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="opportunitiesFilters()" ng-click="$storage.op = fav" >
+      <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="opportunitiesFilter()" ng-click="$storage.op = fav" >
        <label>{{item.text}}</label>
      </div>
  </ion-checkbox></div>
@@ -53,7 +52,6 @@
                     <button class="button button-full button-positive" ng-click="storeObject()">
                              Save
                           </button>
-
   <a type="submit" class="button button-block button-positive" href="#/app/swotoutput" ng-click="reload()">Calculate SWOT</a>
 
 </ion-content>
