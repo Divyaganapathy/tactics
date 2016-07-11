@@ -43,15 +43,16 @@ angular.module('tactics.controllers', [])
   $scope.data = {
     'Count': 0};
 
-  $scope.strengthList = [
+  $scope.$storage=$localStorage.$default({
+    strengthList : [
       { id: 1, text: "1. Does your company have technological advantages?", suggestion: "s1, s2, s3", checked: false },
       { id: 2, text: "2. Do you perform better than your competitiors?", suggestion: "s4, s5, s6", checked: false },
       { id: 3, text: "3. Are you strategically well placed within your sector?", suggestion: "s7, s8, s9", checked: false },
       { id: 4, text: "4. Do you have features that your customers perceive as your strength?", suggestion: "s10, s12, s13", checked: false },
       { id: 5, text: "5. Does your company have factors that faciliate possible sales?", suggestion: "s21, s22, s23", checked: false }
-    ];
+    ]
 
-
+});
 
 
   $scope.pushNotificationChange = function() {
@@ -341,13 +342,14 @@ $scope.reload = function() {location.reload();}
      $scope.data = $localStorage.data;
    }
 
-   $scope.$storage =  $localStorage.$default({
-             swot: {},
-             mix: {}
-           });
- $scope.checkcount=function(){$scope.cc=$filter('filter')($scope.strengthList,{checked:true})};
-
-
+  // $scope.$storage =  $localStorage.$default({
+  //           swot: {},
+  //           mix: {}
+  //         });
+  //         $scope.checkcount=function(){$scope.cc=$filter('filter')($scope.strengthList,{checked:true})};
+            $scope.chipsColores = function () {
+                    $scope.fav = $filter('filter')($scope.$storage.strengthList, {checked: true});
+            };
 
 
   });
