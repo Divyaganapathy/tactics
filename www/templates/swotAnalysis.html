@@ -2,57 +2,64 @@
   <ion-content>
     <h1>SWOT Analysis</h1>
 <h2>Strength</h2>
-
 <div class="list">
-  <div ng-repeat="item in strengthList" >
-         <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-checked="$storage.swot[item.text]" ng-click="$storage.swot[item.text] = item.checked">
+<div ng-repeat="item in $storage.strengthList" >
+      <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="itemsColores()" ng-click="$storage.b = fav" >
+       <label>{{item.text}}</label>
+     </div>
+ </ion-checkbox>
+       <div ng-repeat="favorite in $storage.b">
+                        localStorage: {{favorite.suggestion}}
+                </div>
+</div>
+
+  <p> Strength : {{(($storage.strengthList|filter:{checked:true}).length/5)*100}}%</p>
+
+  <div class="list">
+  <div ng-repeat="item in $storage.weaknessList" >
+        <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="itemsColores()" ng-click="$storage.w = fav" >
          <label>{{item.text}}</label>
-           </ion-checkbox>
        </div>
+   </ion-checkbox>
+         <div ng-repeat="favorite in $storage.w">
+                          localStorage: {{favorite.suggestion}}
+                  </div>
+  </div>
 
+    <p> Weakness : {{(($storage.weaknessList|filter:{checked:true}).length/5)*100}}%</p>
 
-
-  <p> Strength : {{((strengthList|filter:{checked:true}).length/5)*100}}%</p>
-
-
-
-
-
-        </div>
-
-
-        <div class="list">
-          <div ng-repeat="item in weaknessList" >
-            <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-checked="$storage.swot[item.text]" ng-click="$storage.swot[item.text] = item.checked">
-            <label>{{item.text}}</label>
-              </ion-checkbox>
-               </div>
-              <p> Weakness : {{((weaknessList|filter:{checked:true}).length/5)*100}}%</p>
-
-              </div>
-
-        <div class="list">
-          <div ng-repeat="item in opportunitiesList" >
-            <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-checked="$storage.swot[item.text]" ng-click="$storage.swot[item.text] = item.checked">
-            <label>{{item.text}}</label>
-              </ion-checkbox>
-               </div>
-            <p> Opportunities : {{((opportunitiesList|filter:{checked:true}).length/5)*100}}%</p>
-
-              </div>
-              <div class="list">
-                <div ng-repeat="item in threatsList" >
-                  <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-checked="$storage.swot[item.text]" ng-click="$storage.swot[item.text] = item.checked">
-                  <label>{{item.text}}</label>
-                    </ion-checkbox>
-                     </div>
-                    <p> Threats : {{((threatsList|filter:{checked:true}).length/5)*100}}%</p>
-
+    <div class="list">
+    <div ng-repeat="item in $storage.opportunitiesList" >
+          <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="itemsColores()" ng-click="$storage.o = fav" >
+           <label>{{item.text}}</label>
+         </div>
+     </ion-checkbox>
+           <div ng-repeat="favorite in $storage.o">
+                            localStorage: {{favorite.suggestion}}
                     </div>
+    </div>
+
+      <p> Opportunities : {{(($storage.opportunitiesList|filter:{checked:true}).length/5)*100}}%</p>
+
+      <div class="list">
+      <div ng-repeat="item in $storage.threatsList" >
+            <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="itemsColores()" ng-click="$storage.t = fav" >
+             <label>{{item.text}}</label>
+           </div>
+       </ion-checkbox>
+             <div ng-repeat="favorite in $storage.t">
+                              localStorage: {{favorite.suggestion}}
+                      </div>
+      </div>
+
+        <p> Threats : {{(($storage.threatsList|filter:{checked:true}).length/5)*100}}%</p>
+
                     <button class="button button-full button-positive" ng-click="storeObject()">
                              Save
                           </button>
   <a type="submit" class="button button-block button-positive" href="#/app/swotoutput" ng-click="reload()">Calculate SWOT</a>
-
+  <div ng-repeat="favorite in $storage.swot">
+             localStorage: {{favorite.suggestion}}
+         </div>
 </ion-content>
 </ion-view>
