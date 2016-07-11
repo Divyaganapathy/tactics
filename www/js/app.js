@@ -41,14 +41,42 @@ angular.module('tactics', ['ionic', 'tactics.controllers','chart.js','ngStorage'
     }
   })
 
-/*  .state('app.companyinformation', {
-      url: '/companyinformation',
+  .state('app.companyinfo', {
+      url: '/companyinfo',
       views: {
         'menuContent': {
-          templateUrl: 'templates/companyinformation.html'
+          templateUrl: 'templates/companyinfo.html'
         }
       }
-    }) */
+    })
+
+    .state('app.finance', {
+        url: '/finance',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/finance.html'
+          }
+        }
+      })
+
+      .state('app.strategies', {
+          url: '/strategies',
+          views: {
+            'menuContent': {
+              templateUrl: 'templates/strategies.html'
+            }
+          }
+        })
+
+    .state('app.sales', {
+        url: '/sales',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/sales.html'
+          }
+        }
+      })
+
 
     .state('app.startUpCalculator', {
         url: '/startUpCalculator',
