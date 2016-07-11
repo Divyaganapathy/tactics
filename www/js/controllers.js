@@ -43,6 +43,7 @@ angular.module('tactics.controllers', [])
   $scope.data = {
     'Count': 0};
 
+<<<<<<< HEAD
   $scope.$storage=$localStorage.$default({
     strengthList : [
       { id: 1, text: "1. Does your company have technological advantages?", suggestion: "s1, s2, s3", checked: false },
@@ -116,6 +117,8 @@ angular.module('tactics.controllers', [])
 
 
 
+=======
+>>>>>>> 7c3527527cb51e8c233aa965b0c0cb553cf0a4dc
 
   $scope.productList = [
     { text: "1. Does your company produce variety of products in order to meet customer satisfaction?", checked: false },
@@ -342,14 +345,67 @@ $scope.reload = function() {location.reload();}
      $scope.data = $localStorage.data;
    }
 
-  // $scope.$storage =  $localStorage.$default({
-  //           swot: {},
-  //           mix: {}
-  //         });
-  //         $scope.checkcount=function(){$scope.cc=$filter('filter')($scope.strengthList,{checked:true})};
+
+ $scope.$storage =  $localStorage.$default({
+           swot: {},
+           mix: {}
+         });
+         $scope.checkcount=function(){$scope.cc=$filter('filter')($scope.strengthList,{checked:true})};
             $scope.chipsColores = function () {
                     $scope.fav = $filter('filter')($scope.$storage.strengthList, {checked: true});
             };
+
+   $scope.$storage =  $localStorage.$default({
+             swot: {},
+             mix: {}
+           });
+ $scope.checkcount=function(){$scope.cc=$filter('filter')($scope.strengthList,{checked:true})};
+ $scope.strengthFilter = function () {
+       $scope.fav = $filter('filter')($scope.$storage.strengthList, {checked: true});
+}
+$scope.weaknessFilter = function () {
+      $scope.fav = $filter('filter')($scope.$storage.weaknessList, {checked: true});
+}
+$scope.opportunitiesFilter = function () {
+      $scope.fav = $filter('filter')($scope.$storage.opportunitiesList, {checked: true});
+}
+$scope.threatsFilter = function () {
+      $scope.fav = $filter('filter')($scope.$storage.threatsList, {checked: true});
+}
+//move the 'colores' into storage
+ $scope.$storage =  $localStorage.$default({
+   strengthList : [
+                      { text: "1. Does your company have technological advantages?", suggestion: "s1, s2, s3", checked: false },
+                      { text: "2. Do you perform better than your competitiors?", suggestion: "s4, s5, s6", checked: false },
+                      { text: "3. Are you strategically well placed within your sector?", suggestion: "s7, s8, s9", checked: false },
+                      { text: "4. Do you have features that your customers perceive as your strength?", suggestion: "s10, s12, s13", checked: false },
+                      { text: "5. Does your company have factors that faciliate possible sales?", suggestion: "s21, s22, s23", checked: false }
+
+ ],
+ weaknessList : [
+  { text: "1. Are the activities performed by your company weaker than required?", suggestion: "the activities performed by my company are weaker than required", checked: false },
+  { text: "2. Do you waste your resources which are your strength?",suggestion: "waste my resources", checked: false },
+  { text: "3. Does your company have factors than customer perceive as weakness?", suggestion: "There are customer perceive as weakness", checked: false },
+  { text: "4. Do you think your product/service can be improved?", suggestion: "product/service can be improved", checked: false },
+  { text: "5. Does you perform unneccessary activites that could be avoided?", suggestion: "unneccessary activites could be avoided", checked: false }
+],
+opportunitiesList : [
+  { text: "1. Does your company have good business opportunities?", suggestion: "good business opportunities", checked: false },
+  { text: "2. Are there needs that your clients have but are not offered by your competitors?", suggestion: "o1", checked: false },
+  { text: "3. Is there scope for technological development in the market?", suggestion: "o2", checked: false },
+  { text: "4. Is there a possibility for political or legal changes in the market?", suggestion: "o3", checked: false },
+  { text: "5. Is there scope for other changes that will favour your range of products?", suggestion: "o4", checked: false }
+],
+threatsList : [
+  { text: "1. Are there tendencies that could menace the exitence of your company/product/services?", suggestion: "t1", checked: false },
+  { text: "2. Are your competitors improving the products/services better than you?", suggestion: "t2", checked: false },
+  { text: "3. Do you face obstacles in the functioning of your company?", suggestion: "t3", checked: false },
+  { text: "4. Does technological changes threaten your company's position?", suggestion: "t4", checked: false },
+  { text: "5. Do you face issues regarding capital resources?", suggestion: "t5", checked: false }
+]
+});
+
+
 
 
   });
