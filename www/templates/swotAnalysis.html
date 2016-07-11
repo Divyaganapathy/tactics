@@ -3,50 +3,56 @@
     <h1>SWOT Analysis</h1>
 <h2>Strength</h2>
 
-  <div class="list">
-        <ion-checkbox ng-repeat="item in strengthList"
-                      ng-model="item.checked"
-                      ng-checked="item.checked">
-          {{ item.text }}
-        </ion-checkbox>
-        <p> Strength : {{((strengthList|filter:{checked:true}).length/5)*100}}%</p>
+<div class="list">
+  <div ng-repeat="item in strengthList" >
+         <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-checked="$storage.swot[item.text]" ng-click="$storage.swot[item.text] = item.checked">
+         <label>{{item.text}}</label>
+           </ion-checkbox>
+       </div>
+
+
+
+  <p> Strength : {{((strengthList|filter:{checked:true}).length/5)*100}}%</p>
+
+
+
+
 
         </div>
+
+
         <div class="list">
-              <ion-checkbox ng-repeat="item in weaknessList"
-                            ng-model="item.checked"
-                            ng-checked="item.checked">
-                {{ item.text }}
+          <div ng-repeat="item in weaknessList" >
+            <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-checked="$storage.swot[item.text]" ng-click="$storage.swot[item.text] = item.checked">
+            <label>{{item.text}}</label>
               </ion-checkbox>
+               </div>
               <p> Weakness : {{((weaknessList|filter:{checked:true}).length/5)*100}}%</p>
 
               </div>
 
         <div class="list">
-              <ion-checkbox ng-repeat="item in opportunitiesList"
-                            ng-model="item.checked"
-                            ng-checked="item.checked"
-                            ng-change="storeObject()">
-                {{ item.text }}
+          <div ng-repeat="item in opportunitiesList" >
+            <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-checked="$storage.swot[item.text]" ng-click="$storage.swot[item.text] = item.checked">
+            <label>{{item.text}}</label>
               </ion-checkbox>
-              <p> Opportunities : {{((opportunitiesList|filter:{checked:true}).length/5)*100}}%</p>
+               </div>
+            <p> Opportunities : {{((opportunitiesList|filter:{checked:true}).length/5)*100}}%</p>
 
               </div>
               <div class="list">
-                    <ion-checkbox ng-repeat="item in threatsList"
-                                  ng-model="item.checked"
-                                  ng-checked="item.checked">
-                      {{ item.text }}
+                <div ng-repeat="item in threatsList" >
+                  <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-checked="$storage.swot[item.text]" ng-click="$storage.swot[item.text] = item.checked">
+                  <label>{{item.text}}</label>
                     </ion-checkbox>
+                     </div>
                     <p> Threats : {{((threatsList|filter:{checked:true}).length/5)*100}}%</p>
 
                     </div>
-
-
-
                     <button class="button button-full button-positive" ng-click="storeObject()">
                              Save
                           </button>
-  <a type="submit" class="button button-block button-positive" href="#/app/swotoutput">Calculate SWOT</a>
+  <a type="submit" class="button button-block button-positive" href="#/app/swotoutput" ng-click="reload()">Calculate SWOT</a>
+
 </ion-content>
 </ion-view>

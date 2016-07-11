@@ -41,14 +41,14 @@ angular.module('tactics', ['ionic', 'tactics.controllers','chart.js','ngStorage'
     }
   })
 
-/*  .state('app.companyinformation', {
-      url: '/companyinformation',
+  .state('app.companyinfo', {
+      url: '/companyinfo',
       views: {
         'menuContent': {
-          templateUrl: 'templates/companyinformation.html'
+          templateUrl: 'templates/companyinfo.html'
         }
       }
-    }) */
+    })
 
     .state('app.startUpCalculator', {
         url: '/startUpCalculator',

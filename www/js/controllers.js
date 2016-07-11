@@ -1,6 +1,6 @@
 angular.module('tactics.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, $localStorage) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $localStorage, $filter) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -40,7 +40,8 @@ angular.module('tactics.controllers', [])
     }, 1000);
   };
 
-
+  $scope.data = {
+    'Count': 0};
 
   $scope.strengthList = [
       { id: 1, text: "1. Does your company have technological advantages?", suggestion: "s1, s2, s3", checked: false },
@@ -50,12 +51,16 @@ angular.module('tactics.controllers', [])
       { id: 5, text: "5. Does your company have factors that faciliate possible sales?", suggestion: "s21, s22, s23", checked: false }
     ];
 
+
+
+
   $scope.pushNotificationChange = function() {
     console.log('Push Notification Change', $scope.pushNotification.checked);
   };
 
   $scope.pushNotification = { checked: true };
-  $scope.checkedCount=function(){return $scope.data.filter(function(person){return person.checked;}).length;}
+
+
 
 
 
@@ -72,7 +77,7 @@ angular.module('tactics.controllers', [])
   };
 
   $scope.pushNotification = { checked: true };
-  $scope.checkedCount=function(){return $scope.data.filter(function(person){return person.checked;}).length;}
+
 
 
   $scope.opportunitiesList = [
@@ -88,7 +93,7 @@ angular.module('tactics.controllers', [])
   };
 
   $scope.pushNotification = { checked: true };
-  $scope.checkedCount=function(){return $scope.data.filter(function(person){return person.checked;}).length;}
+
 
 
 
@@ -105,7 +110,7 @@ angular.module('tactics.controllers', [])
   };
 
   $scope.pushNotification = { checked: true };
-  $scope.checkedCount=function(){return $scope.data.filter(function(person){return person.checked;}).length;}
+
 
 
 
@@ -125,7 +130,7 @@ angular.module('tactics.controllers', [])
   };
 
   $scope.pushNotification = { checked: true };
-  $scope.checkedCount=function(){return $scope.data.filter(function(person){return person.checked;}).length;}
+
 
 
   $scope.priceList = [
@@ -335,5 +340,14 @@ $scope.reload = function() {location.reload();}
    if($localStorage.data !== undefined) {
      $scope.data = $localStorage.data;
    }
+
+   $scope.$storage =  $localStorage.$default({
+             swot: {},
+             mix: {}
+           });
+ $scope.checkcount=function(){$scope.cc=$filter('filter')($scope.strengthList,{checked:true})};
+
+
+
 
   });

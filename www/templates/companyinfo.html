@@ -1,0 +1,32 @@
+<ion-view view-title="Company Information">
+  <ion-content>
+    <h2>Company Information</h2>
+
+
+    <form ng-submit="">
+      <div class="col">
+      <label class="item">
+        Company Name
+        <div class="col col-2"></div><input type="text" placeholder="{{data.cname}}" ng-model="data.cname">
+      </div>
+  </label>
+  <div class="col">
+  <label class="item">
+    Vision
+    <div class="col col-2"></div><input type="text" placeholder="{{data.vision}}" ng-model="data.vision">
+  </div>
+</label>
+<div class="col">
+<label class="item">
+  Mission
+  <div class="col col-2"></div><input type="text" placeholder="{{data.mission}}" ng-model="data.mission">
+</div>
+</label>
+    </form>
+    <button class="button button-full button-positive" ng-click="storeObject()">
+             Save
+          </button>
+      <a class="button button-positive" href="#/app/home">HOME</a>
+
+  </ion-content>
+  </ion-view>
