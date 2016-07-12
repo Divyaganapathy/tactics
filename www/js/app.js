@@ -77,6 +77,41 @@ angular.module('tactics', ['ionic', 'tactics.controllers','chart.js','ngStorage'
         }
       })
 
+      .state('app.monthlyincome', {
+          url: '/monthlyincome',
+          views: {
+            'menuContent': {
+              templateUrl: 'templates/monthlyincome.html'
+            }
+          }
+        })
+
+.state('app.monthlyincomeoutput', {
+    url: '/monthlyincomeoutput',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/monthlyincomeoutput.html'
+      }
+    }
+  })
+
+  .state('app.weeklyincome', {
+      url: '/weeklyincome',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/weeklyincome.html'
+        }
+      }
+    })
+
+    .state('app.weeklyincomeoutput', {
+        url: '/weeklyincomeoutput',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/weeklyincomeoutput.html'
+          }
+        }
+      })
 
     .state('app.startUpCalculator', {
         url: '/startUpCalculator',
