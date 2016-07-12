@@ -167,7 +167,39 @@ angular.module('tactics.controllers', [])
     'dos3': 0,
     'dof3': 0,
     'totalini': 0,
-    'totalmon': 0
+    'totalmon': 0,
+    'exjanuary': 0,
+    'exfebruary': 0,
+    'exmarch': 0,
+    'exapril': 0,
+    'exmay': 0,
+    'exjune': 0,
+    'exjuly': 0,
+    'exaugust': 0,
+    'exseptember': 0,
+    'exoctober': 0,
+    'exnovember': 0,
+    'exdecember': 0,
+    'acjanuary': 0,
+    'acfebruary': 0,
+    'acmarch': 0,
+    'acapril': 0,
+    'acmay': 0,
+    'acjune': 0,
+    'acjuly': 0,
+    'acaugust': 0,
+    'acseptember': 0,
+    'acoctober': 0,
+    'acnovember': 0,
+    'acdecember': 0,
+    'exweek1': 0,
+    'exweek2': 0,
+    'exweek3': 0,
+    'exweek4': 0,
+    'acweek1': 0,
+    'acweek2': 0,
+    'acweek3': 0,
+    'acweek4': 0
   };
 
   $scope.infraresult = function() {
@@ -319,6 +351,17 @@ threatsList : [
 ]
 });
 
+$scope.labels10 =["January","February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
+$scope.series10 = ['Expected Income', 'Actual Income'];
+$scope.data10 =[
+    [$scope.data.exjanuary,$scope.data.exfebruary,$scope.data.exmarch,$scope.data.exapril,$scope.data.exmay,$scope.data.exjune,$scope.data.exjuly,$scope.data.exaugust,$scope.data.exseptember,$scope.data.exoctober,$scope.data.exnovember,$scope.data.exdecember],
+    [$scope.data.acjanuary,$scope.data.acfebruary,$scope.data.acmarch,$scope.data.acapril,$scope.data.acmay,$scope.data.acjune,$scope.data.acjuly,$scope.data.acaugust,$scope.data.acseptember,$scope.data.acoctober,$scope.data.acnovember,$scope.data.acdecember]
+];
 
-
+$scope.labels11 =["Week 1","Week 2", "Week 3","Week 4"];
+$scope.series11 = ['Expected Income', 'Actual Income'];
+$scope.data11 =[
+    [$scope.data.exweek1,$scope.data.exweek2,$scope.data.exweek3,$scope.data.exweek4],
+    [$scope.data.acweek1,$scope.data.acweek2,$scope.data.acweek3,$scope.data.acweek4]
+];
   });

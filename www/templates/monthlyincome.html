@@ -1,0 +1,81 @@
+<ion-view view-title="monthlyincome">
+  <ion-content>
+    <h2>Monthly Income</h2>
+  <table>
+   <thead>
+       <th>Month</th>
+       <th>Expected Sales</th>
+       <th>Actual Sales</th>
+   </thead>
+   <tbody>
+
+                <tr>
+                     <td>January</td>
+                    <td><input type="number" placeholder="{{data.exjanuary}}" ng-model="data.exjanuary"></td>
+                    <td><input type="number" placeholder="{{data.acjanuary}}" ng-model="data.acjanuary"></a></td>
+                 </tr>
+                 <tr>
+                      <td>February</td>
+                     <td><input type="number" placeholder="{{data.exfebruary}}" ng-model="data.exfebruary"></td>
+                     <td><input type="number" placeholder="{{data.acfebruary}}" ng-model="data.acfebruary"></a></td>
+                  </tr>
+                  <tr>
+                       <td>March</td>
+                      <td><input type="number" placeholder="{{data.exmarch}}" ng-model="data.exmarch"></td>
+                      <td><input type="number" placeholder="{{data.acmarch}}" ng-model="data.acmarch"></a></td>
+                   </tr>
+                   <tr>
+                        <td>April</td>
+                       <td><input type="number" placeholder="{{data.exapril}}" ng-model="data.exapril"></td>
+                       <td><input type="number" placeholder="{{data.acapril}}" ng-model="data.acapril"></a></td>
+                    </tr>
+                    <tr>
+                         <td>May</td>
+                        <td><input type="number" placeholder="{{data.exmay}}" ng-model="data.exmay"></td>
+                        <td><input type="number" placeholder="{{data.acmay}}" ng-model="data.acmay"></a></td>
+                     </tr>
+                     <tr>
+                          <td>June</td>
+                         <td><input type="number" placeholder="{{data.exjune}}" ng-model="data.exjune"></td>
+                         <td><input type="number" placeholder="{{data.acjune}}" ng-model="data.acjune"></a></td>
+                      </tr>
+                      <tr>
+                           <td>July</td>
+                          <td><input type="number" placeholder="{{data.exjuly}}" ng-model="data.exjuly"></td>
+                          <td><input type="number" placeholder="{{data.acjuly}}" ng-model="data.acjuly"></a></td>
+                       </tr>
+                       <tr>
+                            <td>August</td>
+                           <td><input type="number" placeholder="{{data.exaugust}}" ng-model="data.exaugust"></td>
+                           <td><input type="number" placeholder="{{data.acaugust}}" ng-model="data.acaugust"></a></td>
+                        </tr>
+                        <tr>
+                             <td>September</td>
+                            <td><input type="number" placeholder="{{data.exseptember}}" ng-model="data.exseptember"></td>
+                            <td><input type="number" placeholder="{{data.acseptember}}" ng-model="data.acseptember"></a></td>
+                         </tr>
+                         <tr>
+                              <td>October</td>
+                             <td><input type="number" placeholder="{{data.exoctober}}" ng-model="data.exoctober"></td>
+                             <td><input type="number" placeholder="{{data.acoctober}}" ng-model="data.acoctober"></a></td>
+                          </tr>
+                          <tr>
+                               <td>November</td>
+                              <td><input type="number" placeholder="{{data.exnovember}}" ng-model="data.exnovember"></td>
+                              <td><input type="number" placeholder="{{data.acnovember}}" ng-model="data.acnovember"></a></td>
+                           </tr>
+                           <tr>
+                                <td>December</td>
+                               <td><input type="number" placeholder="{{data.exdecember}}" ng-model="data.exdecember"></td>
+                               <td><input type="number" placeholder="{{data.acdecember}}" ng-model="data.acdecember"></a></td>
+                            </tr>
+          </tbody>
+</table>
+    <button class="button button-full button-positive" ng-click="storeObject()">
+             Save
+          </button>
+      <a class="button button-positive" href="#/app/home">HOME</a>
+      <a class="button button-block button-positive" href="#/app/monthlyincomeoutput" ng-click="reload()">Click to view chart</a>
+
+  </ion-content>
+  </ion-view>
