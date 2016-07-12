@@ -1,0 +1,41 @@
+<ion-view view-title="monthlyincome">
+  <ion-content>
+    <h2>Weekly Income</h2>
+  <table>
+   <thead>
+       <th>Week</th>
+       <th>Expected Sales</th>
+       <th>Actual Sales</th>
+   </thead>
+   <tbody>
+
+                <tr>
+                     <td>Week 1</td>
+                    <td><input type="number" placeholder="{{data.exweek1}}" ng-model="data.exweek1"></td>
+                    <td><input type="number" placeholder="{{data.acweek1}}" ng-model="data.acweek1"></a></td>
+                 </tr>
+                 <tr>
+                      <td>Week 2</td>
+                     <td><input type="number" placeholder="{{data.exweek2}}" ng-model="data.exweek2"></td>
+                     <td><input type="number" placeholder="{{data.acweek2}}" ng-model="data.acweek2"></a></td>
+                  </tr>
+                  <tr>
+                       <td>Week 3</td>
+                      <td><input type="number" placeholder="{{data.exweek3}}" ng-model="data.exweek3"></td>
+                      <td><input type="number" placeholder="{{data.acweek3}}" ng-model="data.acweek3"></a></td>
+                   </tr>
+                   <tr>
+                        <td>Week 4</td>
+                       <td><input type="number" placeholder="{{data.exweek4}}" ng-model="data.exweek4"></td>
+                       <td><input type="number" placeholder="{{data.acweek4}}" ng-model="data.acweek4"></a></td>
+                    </tr>
+                              </tbody>
+</table>
+    <button class="button button-full button-positive" ng-click="storeObject()">
+             Save
+          </button>
+      <a class="button button-positive" href="#/app/home">HOME</a>
+      <a class="button button-block button-positive" href="#/app/weeklyincomeoutput" ng-click="reload()">Click to view chart</a>
+
+  </ion-content>
+  </ion-view>
