@@ -3,13 +3,11 @@
     <h1>Marketing Mix</h1>
 <h2>Four Ps</h2>
 <h2>Promotion</h2>
-          <div class="list">
-                <ion-checkbox ng-repeat="item in promotionList"
-                              ng-model="item.checked"
-                              ng-checked="item.checked">
-                  {{ item.text }}
-                </ion-checkbox>
-                </div>
+<div ng-repeat="item in $storage.promotionList" >
+      <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="promotionFilter()" ng-click="$storage.pro = fav" >
+       <label>{{item.text}}</label>
+     </div>
+ </ion-checkbox></div>
         <a class="button button-block button-positive" href="#/app/outputpromotion">Save</a>
       <a class="button button-block button-positive" href="#/app/place">Next</a>
 </ion-content>
