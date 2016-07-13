@@ -1,28 +1,13 @@
 <ion-view view-title="Monthly Income Chart">
   <ion-content>
     <button class="button button-full button-positive" ng-click="toggle()">
-             Alternate View 
+             Alternate View
           </button>
     <h2>Monthly Income Chart</h2>
     <canvas id="base" class="chart-base" chart-type="type"
   chart-data="data10" chart-labels="labels10" >
 </canvas>
-    <div class="card">
-            <div class="item item-divider">
-                A bar chart
-            </div>
-            <div class="item item-text-wrap">
-                <canvas id="bar" class="chart chart-bar" data="data10" labels="labels10" legend="true" series="series10" options="{showTooltips: false}"></canvas>
-            </div>
-        </div>
-        <div class="card">
-                <div class="item item-divider">
-                    A  Line chart
-                </div>
-                <div class="item item-text-wrap">
-                    <canvas id="line" class="chart chart-line" data="data10" labels="labels10" legend="true" series="series10" options="{showTooltips: false}"></canvas>
-                </div>
-            </div>
+
   <a class="button button-balanced" href="#/app/home">HOME</a>
   <a class="button button-balanced" href="#/app/monthlyincome">BACK</a>
 </ion-content>
