@@ -76,7 +76,14 @@ angular.module('tactics', ['ionic', 'tactics.controllers','chart.js','ngStorage'
           }
         }
       })
-
+      .state('app.todo', {
+          url: '/todo',
+          views: {
+            'menuContent': {
+              templateUrl: 'templates/todo.html'
+            }
+          }
+        })
       .state('app.monthlyincome', {
           url: '/monthlyincome',
           views: {
