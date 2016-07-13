@@ -1,6 +1,13 @@
 <ion-view view-title="Weekly Income Chart">
   <ion-content>
     <h2>Weekly Income Chart</h2>
+    <button class="button button-full button-positive" ng-click="toggle()">
+             Alternate View
+          </button>
+    <h2>Monthly Income Chart</h2>
+    <canvas id="base" class="chart-base" chart-type="type"
+  chart-data="data11" chart-labels="labels11" >
+</canvas>
     <div class="card">
             <div class="item item-divider">
                 A bar chart
