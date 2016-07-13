@@ -364,4 +364,11 @@ $scope.data11 =[
     [$scope.data.exweek1,$scope.data.exweek2,$scope.data.exweek3,$scope.data.exweek4],
     [$scope.data.acweek1,$scope.data.acweek2,$scope.data.acweek3,$scope.data.acweek4]
 ];
+$scope.type = 'Bar';
+
+    $scope.toggle = function () {
+      $scope.type = $scope.type === 'Bar' ?
+        'Line' : 'Bar';
+    };
+
   });
