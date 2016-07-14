@@ -2,13 +2,18 @@
   <ion-content>
     <h1>Marketing Mix</h1>
 <h2>Four Ps</h2>
+
 <h2>Product</h2>
+<div class="list">
+
 <div ng-repeat="item in $storage.productList" >
       <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="productFilter()" ng-click="$storage.pd = fav" >
        <label>{{item.text}}</label>
      </div>
  </ion-checkbox></div>
+
  <a class="button button-block button-positive" href="#/app/outputproduct">Save</a>
    <a class="button button-block button-positive" href="#/app/price">Next</a>
       </ion-content>
+
 </ion-view>

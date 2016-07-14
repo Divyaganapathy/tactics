@@ -163,6 +163,38 @@ angular.module('tactics', ['ionic', 'tactics.controllers','chart.js','ngStorage'
                   }
                 }
               })
+              .state('app.fiveforces', {
+                  url: '/fiveforces',
+                  views: {
+                    'menuContent': {
+                      templateUrl: 'templates/fiveforces.html'
+                    }
+                  }
+                })
+                .state('app.fiveforcesoutput', {
+                    url: '/fiveforcesoutput',
+                    views: {
+                      'menuContent': {
+                        templateUrl: 'templates/fiveforcesoutput.html'
+                      }
+                    }
+                  })
+                  .state('app.pestAnalysis', {
+                      url: '/pestAnalysis',
+                      views: {
+                        'menuContent': {
+                          templateUrl: 'templates/pestAnalysis.html'
+                        }
+                      }
+                    })
+                    .state('app.pestAnalysisoutput', {
+                        url: '/pestAnalysisoutput',
+                        views: {
+                          'menuContent': {
+                            templateUrl: 'templates/pestAnalysisoutput.html'
+                          }
+                        }
+                      })
             .state('app.strength', {
                 url: '/strength',
                 views: {
