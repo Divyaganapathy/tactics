@@ -1,14 +1,13 @@
 <ion-view view-title="place">
   <ion-content>
     <h1>Marketing Mix</h1>
-<h2>Four Ps</h2>
+<h2>Seven Ps</h2>
 <h2>Place</h2>
 <div ng-repeat="item in $storage.placeList" >
       <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="placeFilter()" ng-click="$storage.pla = fav" >
        <label>{{item.text}}</label>
      </div>
  </ion-checkbox></div>
-                <a class="button button-block button-positive" href="#/app/outputplace">Save</a>
-        <button type="submit" class="button button-block button-calm">FINISH</button>
+        <a class="button button-block button-positive" href="#/app/people">Next</a>
       </ion-content>
 </ion-view>

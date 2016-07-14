@@ -1,0 +1,13 @@
+<ion-view view-title="people">
+  <ion-content>
+    <h1>Marketing Mix</h1>
+<h2>Seven Ps</h2>
+<h2>People</h2>
+<div ng-repeat="item in $storage.peopleList" >
+      <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="peopleFilter()" ng-click="$storage.peo = fav" >
+       <label>{{item.text}}</label>
+     </div>
+ </ion-checkbox></div>
+  <a class="button button-block button-positive" href="#/app/process">Next</a>
+      </ion-content>
+</ion-view>

@@ -1,0 +1,39 @@
+<ion-view view-title="marketingmix">
+  <ion-content>
+    <h2>Marketing Mix</h2>
+
+          <div class="list list-inset">
+        <div class="list">
+          <div class="item">
+        <div ng-repeat="product in $storage.pd">
+                         product: {{product.suggestion}}
+                 </div></div>
+                 <div class="item">
+        <div ng-repeat="price in $storage.pri">
+                        Price: {{price.suggestion}}
+                 </div></div>
+                 <div class="item">
+        <div ng-repeat="place in $storage.pla">
+                         Place: {{place.suggestion}}
+                 </div></div>
+                 <div class="item">
+                 <div ng-repeat="promotion in $storage.pro">
+                                Promotion: {{promotion.suggestion}}
+                          </div></div>
+                          <div class="item">
+                            <div ng-repeat="people in $storage.peo">
+                                           People: {{people.suggestion}}
+                                     </div></div>
+                                     <div class="item">
+                               <div ng-repeat="proces in $storage.proc">
+                                                process: {{proces.suggestion}}
+                                        </div></div>
+                                        <div class="item">
+                                      <div ng-repeat="physicalevidence in $storage.phy">
+                                                       physicalevidence: {{physicalevidence.suggestion}}
+                                               </div></div>
+                          </div></div>
+                          <a class="button button-balanced" href="#/app/home">HOME</a>
+                          <a class="button button-balanced" href="#/app/physicalevidence">BACK</a>
+</ion-content>
+</ion-view>
