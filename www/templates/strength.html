@@ -1,13 +1,14 @@
 <ion-view view-title="Strength">
   <ion-content>
     <h2>Strength</h2>
-  
 
-      <div class="list list-inset>   <div class="item" ng-repeat="item in strengthList">
-                              {{ item.suggestion }}
+
+      <div class="list list-inset">     <div ng-repeat="value in $storage.swot[item.text]" >
+  {{value}}
+
   </div>
 
-
+</div>
 
   <a class="button button-balanced" href="#/app/weakness">Weakness</a>
   <a class="button button-positive" href="#/app/opportunities">Opportunities</a>

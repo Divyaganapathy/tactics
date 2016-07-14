@@ -15,14 +15,13 @@
       <button class="button button-full button-positive" ng-click="storeObject()">
                Save total
             </button>
+            <button class="button button-full button-positive" ng-click="toggle1()">
+                     Alternate View
+                  </button>
+            <canvas id="base" class="chart-base" chart-type="type1"
+          chart-data="data6" chart-labels="labels1" >
+          </canvas>
 
-<div class="card">
-<div class="item item-divider">
-  Monthly Expenses
-</div>
-<div class="item item-text-wrap">
-    <canvas id="polar-area" class="chart chart-polar-area" data="data6" labels="labels1" legend="true"  options="{showTooltips: true}"></canvas>
-  </div>
-  </div>
+
 </ion-content>
 </ion-view>

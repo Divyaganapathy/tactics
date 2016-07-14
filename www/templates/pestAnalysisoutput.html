@@ -1,0 +1,33 @@
+<ion-view view-title="PEST Analysis">
+  <ion-content>
+    <h2>PEST Analysis</h2>
+
+          <div class="list list-inset">
+        <div class="list">
+          <div class="item">
+            <div ng-repeat="x in $storage.ppp">
+                             Political: {{x.suggestion}}
+                     </div>
+           <p> Political : {{(($storage.politicalList|filter:{checked:true}).length/5)*100}}%</p></div>
+                 <div class="item">
+                   <div ng-repeat="x in $storage.eee">
+                                   Economical: {{x.suggestion}}
+                            </div>
+                  <p> Economical : {{(($storage.economicalList|filter:{checked:true}).length/5)*100}}%</p>
+               </div>
+                 <div class="item">
+                   <div ng-repeat="x in $storage.sss">
+                                    Social: {{x.suggestion}}
+                            </div>
+                  <p> Social: {{(($storage.socialList|filter:{checked:true}).length/5)*100}}%</p>
+               </div>
+                 <div class="item">
+                   <div ng-repeat="x in $storage.ttt">
+                                  Technological: {{x.suggestion}}
+                            </div>
+                  <p>Technological : {{(($storage.technologicalList|filter:{checked:true}).length/5)*100}}%</p>
+                        </div>
+
+
+</ion-content>
+</ion-view>

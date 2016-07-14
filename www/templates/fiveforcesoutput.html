@@ -1,0 +1,39 @@
+<ion-view view-title="Porter's Five Forces Analysis">
+  <ion-content>
+    <h2>Porter's Five Forces Analysis</h2>
+
+          <div class="list list-inset">
+        <div class="list">
+          <div class="item">
+            <div ng-repeat="x in $storage.ne">
+                             Threat of New Entry: {{x.suggestion}}
+                     </div>
+           <p> Threat of New Entry : {{(($storage.newentryList|filter:{checked:true}).length/5)*100}}%</p></div>
+                 <div class="item">
+                   <div ng-repeat="x in $storage.rv">
+                                   Competitive Rivalry: {{x.suggestion}}
+                            </div>
+                  <p> Competitive Rivalry : {{(($storage.rivalryList|filter:{checked:true}).length/5)*100}}%</p>
+               </div>
+                 <div class="item">
+                   <div ng-repeat="x in $storage.sp">
+                                    Supplier Power: {{x.suggestion}}
+                            </div>
+                  <p> Supplier Power: {{(($storage.supplierpList|filter:{checked:true}).length/5)*100}}%</p>
+               </div>
+                 <div class="item">
+                   <div ng-repeat="x in $storage.bp">
+                                  Buying Power: {{x.suggestion}}
+                            </div>
+                  <p>Buying Power : {{(($storage.buyingpList|filter:{checked:true}).length/5)*100}}%</p>
+                        </div>
+                        <div class="item">
+                          <div ng-repeat="x in $storage.sb">
+                                         Threat of Substitution : {{x.suggestion}}
+                                   </div>
+                         <p>Threat of Substitution : {{(($storage.substList|filter:{checked:true}).length/5)*100}}%</p>
+                               </div>
+                          </div></div>
+
+</ion-content>
+</ion-view>

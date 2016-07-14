@@ -1,0 +1,39 @@
+<ion-view view-title="To Do">
+  <ion-content>
+    <h1>To Do</h1>
+
+<form ng-submit="">
+                        <div class="col">
+                        <label class="item">
+                          Add Target
+                          <div class="col col-2"></div><input type="number" placeholder="{{data.target}}" ng-model="data.target">
+                        </div>
+                    </label>
+
+                    <div class="col">
+                    <label class="item">
+                      Budget<input type="number" placeholder="{{data.budget}}" ng-model="data.budget">
+                    </div>
+                    </label>
+
+                    <div class="col">
+                    <label class="item">
+                      Date of start<input type="number" placeholder="{{data.dos}}" ng-model="data.dos">
+                    </div>
+                    </label>
+
+                    <div class="col">
+                    <label class="item">
+                    Date of finish<input type="number" placeholder="{{data.dof}}" ng-model="data.dof">
+                    </div>
+                    </label>
+                </form>
+
+        <button type="submit" class="button button-block button-calm">Save</button>
+        <a class="button button-positive" href="#/app/product">BACK</a>
+        <a class="button button-positive" href="#/app/price">BACK</a>
+        <a class="button button-positive" href="#/app/promotion">BACK</a>
+        <a class="button button-positive" href="#/app/place">BACK</a>
+        <a class="button button-positive" href="#/app/home">HOME</a>
+          </ion-content>
+</ion-view>
