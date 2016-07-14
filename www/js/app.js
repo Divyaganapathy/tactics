@@ -240,42 +240,7 @@ angular.module('tactics', ['ionic', 'tactics.controllers','chart.js','ngStorage'
               }
             })
 
-            .state('app.outputproduct', {
-                url: '/outputproduct',
-                views: {
-                  'menuContent': {
-                    templateUrl: 'templates/outputproduct.html'
-                  }
-                }
-              })
-
-              .state('app.outputprice', {
-                  url: '/outputprice',
-                  views: {
-                    'menuContent': {
-                      templateUrl: 'templates/outputprice.html'
-                    }
-                  }
-                })
-
-                .state('app.outputpromotion', {
-                    url: '/outputpromotion',
-                    views: {
-                      'menuContent': {
-                        templateUrl: 'templates/outputpromotion.html'
-                      }
-                    }
-                  })
-
-                  .state('app.outputplace', {
-                      url: '/outputplace',
-                      views: {
-                        'menuContent': {
-                          templateUrl: 'templates/outputplace.html'
-                        }
-                      }
-                    })
-
+          
             .state('app.initialSetupCost', {
                 url: '/initialSetupCost',
                 views: {
@@ -409,7 +374,41 @@ angular.module('tactics', ['ionic', 'tactics.controllers','chart.js','ngStorage'
                                         }
                                       })
 
+                                      .state('app.people', {
+                                          url: '/people',
+                                          views: {
+                                            'menuContent': {
+                                              templateUrl: 'templates/people.html'
+                                            }
+                                          }
+                                        })
 
+                                        .state('app.process', {
+                                            url: '/process',
+                                            views: {
+                                              'menuContent': {
+                                                templateUrl: 'templates/process.html'
+                                              }
+                                            }
+                                          })
+
+                                          .state('app.physicalevidence', {
+                                              url: '/physicalevidence',
+                                              views: {
+                                                'menuContent': {
+                                                  templateUrl: 'templates/physicalevidence.html'
+                                                }
+                                              }
+                                            })
+
+                                            .state('app.outputmarketingmix', {
+                                                url: '/outputmarketingmix',
+                                                views: {
+                                                  'menuContent': {
+                                                    templateUrl: 'templates/outputmarketingmix.html'
+                                                  }
+                                                }
+                                              })
 
                                       .state('app.outputinitial', {
                                           url: '/outputinitial',
@@ -475,9 +474,7 @@ angular.module('tactics', ['ionic', 'tactics.controllers','chart.js','ngStorage'
                                                                                             }
                                                                                           }
                                                                                         })
-
-
-                                                                                                                                    .state('app.outputmsub2', {
+                                                                                                                                  .state('app.outputmsub2', {
                                                                                                                                         url: '/outputmsub2',
                                                                                                                                         views: {
                                                                                                                                           'menuContent': {

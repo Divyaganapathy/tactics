@@ -1,0 +1,13 @@
+<ion-view view-title="physicalevidence">
+  <ion-content>
+    <h1>Marketing Mix</h1>
+<h2>Seven Ps</h2>
+<h2>Physical Evidence</h2>
+<div ng-repeat="item in $storage.physicalevidenceList" >
+      <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="physicalevidenceFilter()" ng-click="$storage.phy = fav" >
+       <label>{{item.text}}</label>
+     </div>
+ </ion-checkbox></div>
+      <a class="button button-block button-positive" href="#/app/outputmarketingmix">FINISH</a>
+      </ion-content>
+</ion-view>

@@ -257,16 +257,25 @@ $scope.threatsFilter = function () {
       $scope.fav = $filter('filter')($scope.$storage.threatsList, {checked: true});
 }
 $scope.productFilter = function () {
-      $scope.fav = $filter('filter')($scope.$storage.productList, {checked: false});
+      $scope.fav = $filter('filter')($scope.$storage.productList, {checked: true});
 }
 $scope.priceFilter = function () {
-      $scope.fav = $filter('filter')($scope.$storage.priceList, {checked: false});
+      $scope.fav = $filter('filter')($scope.$storage.priceList, {checked: true});
 }
 $scope.promotionFilter = function () {
-      $scope.fav = $filter('filter')($scope.$storage.promotionList, {checked: false});
+      $scope.fav = $filter('filter')($scope.$storage.promotionList, {checked: true});
 }
 $scope.placeFilter = function () {
-      $scope.fav = $filter('filter')($scope.$storage.placeList, {checked: false});
+      $scope.fav = $filter('filter')($scope.$storage.placeList, {checked: true});
+}
+$scope.peopleFilter = function () {
+     $scope.fav = $filter('filter')($scope.$storage.peopleList, {checked: true});
+}
+$scope.processFilter = function () {
+     $scope.fav = $filter('filter')($scope.$storage.processList, {checked: true});
+}
+$scope.physicalevidenceFilter = function () {
+     $scope.fav = $filter('filter')($scope.$storage.physicalevidenceList, {checked: true});
 }
 $scope.rivalryFilter = function () {
       $scope.fav = $filter('filter')($scope.$storage.rivalryList, {checked: true});
@@ -296,7 +305,7 @@ $scope.substFilter = function () {
      $scope.technologicalFilter = function () {
           $scope.fav = $filter('filter')($scope.$storage.technologicalList, {checked: true});
      }
-//move the 'colores' into storage
+
  $scope.$storage =  $localStorage.$default({
    strengthList : [
                       { text: "1. Does your company have technological advantages?", suggestion: "s1, s2, s3", checked: false },
@@ -355,6 +364,24 @@ placeList : [
   { text: "2. Does the location of products aid accessibility?", suggestion: "t2", checked: false },
   { text: "3. Is channel coverage effective?", suggestion: "t3", checked: false },
   { text: "4. Is transportation effective?", suggestion: "t4", checked: false },
+],
+processList : [
+  { text: "1. Do your products get to target the customers?", suggestion: "t1", checked: false },
+  { text: "2. Does the location of products aid accessibility?", suggestion: "t2", checked: false },
+  { text: "3. Is channel coverage effective?", suggestion: "t3", checked: false },
+  { text: "4. Is process effective?", suggestion: "t4", checked: false },
+],
+peopleList : [
+  { text: "1. Do your products get to target the customers?", suggestion: "t1", checked: false },
+  { text: "2. Does the location of products aid accessibility?", suggestion: "t2", checked: false },
+  { text: "3. Is channel coverage effective?", suggestion: "t3", checked: false },
+  { text: "4. Is people effective?", suggestion: "t4", checked: false },
+],
+physicalevidenceList : [
+  { text: "1. Do your products get to target the customers?", suggestion: "t1", checked: false },
+  { text: "2. Does the location of products aid accessibility?", suggestion: "t2", checked: false },
+  { text: "3. Is channel coverage effective?", suggestion: "t3", checked: false },
+  { text: "4. Is physicalevidence effective?", suggestion: "t4", checked: false },
 ],
 newentryList : [
   { text: "1. Does your company produce variety of products in order to meet customer satisfaction?", suggestion: "t1", checked: true },
