@@ -1,0 +1,59 @@
+<ion-view view-title="PEST Analysis">
+  <ion-content>
+    <h1>PEST Analysis</h1>
+<h2>Political</h2>
+<div class="list">
+<div ng-repeat="item in $storage.politicalList" >
+      <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="politicalFilter()" ng-click="$storage.ppp = fav" >
+       <label>{{item.text}}</label>
+     </div>
+ </ion-checkbox></div>
+ <div ng-repeat="x in $storage.ppp">
+                  Political: {{x.suggestion}}
+          </div>
+<p> Political : {{(($storage.politicalList|filter:{checked:true}).length/5)*100}}%</p>
+
+<h2>Economical</h2>
+<div class="list">
+<div ng-repeat="item in $storage.economicalList" >
+      <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="economicalFilter()" ng-click="$storage.eee = fav" >
+       <label>{{item.text}}</label>
+     </div>
+ </ion-checkbox></div>
+ <div ng-repeat="x in $storage.eee">
+                 Economical: {{x.suggestion}}
+          </div>
+<p> Economical : {{(($storage.economicalList|filter:{checked:true}).length/5)*100}}%</p>
+
+<h2>Social</h2>
+<div class="list">
+<div ng-repeat="item in $storage.socialList" >
+      <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="socialFilter()" ng-click="$storage.sss = fav" >
+       <label>{{item.text}}</label>
+     </div>
+ </ion-checkbox></div>
+ <div ng-repeat="x in $storage.sss">
+                  Social: {{x.suggestion}}
+          </div>
+<p> Social: {{(($storage.socialList|filter:{checked:true}).length/5)*100}}%</p>
+
+<h2>Technological</h2>
+<div class="list">
+<div ng-repeat="item in $storage.technologicalList" >
+      <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="technologicalFilter()" ng-click="$storage.ttt = fav" >
+       <label>{{item.text}}</label>
+     </div>
+ </ion-checkbox></div>
+ <div ng-repeat="x in $storage.ttt">
+                Technological: {{x.suggestion}}
+          </div>
+<p>Technological : {{(($storage.technologicalList|filter:{checked:true}).length/5)*100}}%</p>
+
+
+                    <button class="button button-full button-positive" ng-click="storeObject()">
+                             Save
+                          </button>
+  <a type="submit" class="button button-block button-positive" href="#/app/pestAnalysisoutput" ng-click="reload()">Calculate PEST</a>
+
+</ion-content>
+</ion-view>

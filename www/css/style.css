@@ -2,6 +2,10 @@
 .large_button {
   line-height: 50vh !important;
   }
+
+  .small_button {
+    line-height: 30vh !important;
+    }
   .circle{
     width:10%;
     border-radius:50%;

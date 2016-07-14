@@ -268,6 +268,34 @@ $scope.promotionFilter = function () {
 $scope.placeFilter = function () {
       $scope.fav = $filter('filter')($scope.$storage.placeList, {checked: false});
 }
+$scope.rivalryFilter = function () {
+      $scope.fav = $filter('filter')($scope.$storage.rivalryList, {checked: true});
+}
+$scope.newentryFilter = function () {
+     $scope.fav = $filter('filter')($scope.$storage.newentryList, {checked: true});
+}
+$scope.supplierpFilter = function () {
+     $scope.fav = $filter('filter')($scope.$storage.supplierpList, {checked: true});
+}
+$scope.buyingpFilter = function () {
+     $scope.fav = $filter('filter')($scope.$storage.buyingpList, {checked: true});
+}
+$scope.substFilter = function () {
+     $scope.fav = $filter('filter')($scope.$storage.substList, {checked: true});
+ }
+
+     $scope.politicalFilter = function () {
+          $scope.fav = $filter('filter')($scope.$storage.politicalList, {checked: true});
+     }
+     $scope.economicalFilter = function () {
+          $scope.fav = $filter('filter')($scope.$storage.economicalList, {checked: true});
+     }
+     $scope.socialFilter = function () {
+          $scope.fav = $filter('filter')($scope.$storage.socialList, {checked: true});
+     }
+     $scope.technologicalFilter = function () {
+          $scope.fav = $filter('filter')($scope.$storage.technologicalList, {checked: true});
+     }
 //move the 'colores' into storage
  $scope.$storage =  $localStorage.$default({
    strengthList : [
@@ -323,6 +351,68 @@ promotionList : [
   { text: "5. Does your promotion influence the rate of purchase positively?", suggestion: "t5", checked: false },
 ],
 placeList : [
+  { text: "1. Do your products get to target the customers?", suggestion: "t1", checked: false },
+  { text: "2. Does the location of products aid accessibility?", suggestion: "t2", checked: false },
+  { text: "3. Is channel coverage effective?", suggestion: "t3", checked: false },
+  { text: "4. Is transportation effective?", suggestion: "t4", checked: false },
+],
+newentryList : [
+  { text: "1. Does your company produce variety of products in order to meet customer satisfaction?", suggestion: "t1", checked: true },
+  { text: "2. Does your brand name influence company sales?", suggestion: "t2", checked: false },
+  { text: "3. Do your products meet customer's requirement?", suggestion: "t3", checked: false },
+  { text: "4. Do customers complain about quality of products?", suggestion: "t4", checked: false },
+  { text: "5. Is the packaging effective?", suggestion: "t5", checked: false },
+  { text: "6. Does your company provide warranty for your products sold?", suggestion: "t6", checked: false }
+],
+rivalryList : [
+  { text: "1. Do you allow for discounts of your products?", suggestion: "t1", checked: false },
+  { text: "2. Are the prices of the products appropriate?", suggestion: "t2", checked: false },
+  { text: "3. Does your pricing decisions allow for payment period?", suggestion: "t3", checked: false },
+  { text: "4. Does your pricing strategy give room for large customer bases?", suggestion: "t4", checked: false },
+  { text: "5. Does applying strategies to price leads to increase in sales, thereby contibuting to achievement of objectives?", suggestion: "t5", checked: false },
+  { text: "6. Does your pricing decisions allow for credit terms?", suggestion: "t6", checked: false }
+],
+supplierpList : [
+  { text: "1. Do the people know your products based on promotional strategy?", suggestion: "t1", checked: false },
+  { text: "2. Does your organization apply sales promotion as one of the promotion strategies?", suggestion: "t2", checked: false },
+  { text: "3. Does your organization apply advertising promotion as one of the promotion strategies?", suggestion: "t3", checked: false },
+  { text: "4. Does your organization apply selling promotion as one of the promotion strategies?", suggestion: "t4", checked: false },
+  { text: "5. Does your promotion influence the rate of purchase positively?", suggestion: "t5", checked: false },
+],
+buyingpList : [
+  { text: "1. Do your products get to target the customers?", suggestion: "t1", checked: false },
+  { text: "2. Does the location of products aid accessibility?", suggestion: "t2", checked: false },
+  { text: "3. Is channel coverage effective?", suggestion: "t3", checked: false },
+  { text: "4. Is transportation effective?", suggestion: "t4", checked: false },
+],
+substList : [
+  { text: "1. Do your products get to target the customers?", suggestion: "t1", checked: false },
+  { text: "2. Does the location of products aid accessibility?", suggestion: "t2", checked: false },
+  { text: "3. Is channel coverage effective?", suggestion: "t3", checked: false },
+  { text: "4. Is transportation effective?", suggestion: "t4", checked: false },
+],
+politicalList : [
+  { text: "1. Do you allow for discounts of your products?", suggestion: "t1", checked: false },
+  { text: "2. Are the prices of the products appropriate?", suggestion: "t2", checked: false },
+  { text: "3. Does your pricing decisions allow for payment period?", suggestion: "t3", checked: false },
+  { text: "4. Does your pricing strategy give room for large customer bases?", suggestion: "t4", checked: false },
+  { text: "5. Does applying strategies to price leads to increase in sales, thereby contibuting to achievement of objectives?", suggestion: "t5", checked: false },
+  { text: "6. Does your pricing decisions allow for credit terms?", suggestion: "t6", checked: false }
+],
+economicalList : [
+  { text: "1. Do the people know your products based on promotional strategy?", suggestion: "t1", checked: false },
+  { text: "2. Does your organization apply sales promotion as one of the promotion strategies?", suggestion: "t2", checked: false },
+  { text: "3. Does your organization apply advertising promotion as one of the promotion strategies?", suggestion: "t3", checked: false },
+  { text: "4. Does your organization apply selling promotion as one of the promotion strategies?", suggestion: "t4", checked: false },
+  { text: "5. Does your promotion influence the rate of purchase positively?", suggestion: "t5", checked: false },
+],
+socialList : [
+  { text: "1. Do your products get to target the customers?", suggestion: "t1", checked: false },
+  { text: "2. Does the location of products aid accessibility?", suggestion: "t2", checked: false },
+  { text: "3. Is channel coverage effective?", suggestion: "t3", checked: false },
+  { text: "4. Is transportation effective?", suggestion: "t4", checked: false },
+],
+technologicalList : [
   { text: "1. Do your products get to target the customers?", suggestion: "t1", checked: false },
   { text: "2. Does the location of products aid accessibility?", suggestion: "t2", checked: false },
   { text: "3. Is channel coverage effective?", suggestion: "t3", checked: false },
