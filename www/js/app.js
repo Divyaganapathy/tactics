@@ -240,7 +240,7 @@ angular.module('tactics', ['ionic', 'tactics.controllers','chart.js','ngStorage'
               }
             })
 
-          
+
             .state('app.initialSetupCost', {
                 url: '/initialSetupCost',
                 views: {
