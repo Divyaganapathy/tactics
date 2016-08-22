@@ -215,7 +215,8 @@ angular.module('tactics.controllers', [])
    $scope.data5 =[$scope.data.infraresult,$scope.data.iresult,$scope.data.oresult,$scope.data.infraresult + $scope.data.iresult + $scope.data.oresult];
   //$scope.data1 = [28,67,36,88];
 $scope.reload = function() {
-  window.location.reload();
+  setTimeout(function(){
+  window.location.reload();},1);
 }
 
    $scope.labels1 =["Infrastructure Expenses","Business and Legal Expenses", "Salary and Taxes","Communication Expenses", "Total Monthly Expenses"];
