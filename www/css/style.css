@@ -1,8 +1,7 @@
 /* Empty. Add your own CSS if you like */
 .large_button {
-  line-height: 50vh !important;
-  }
-
+  line-height: 40vh !important;
+      }
   .small_button {
     line-height: 30vh !important;
     }
