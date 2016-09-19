@@ -3,7 +3,7 @@
     <h1>Marketing Mix</h1>
 <h2>Seven Ps</h2>
 <h2>Physical Evidence</h2>
-<div ng-repeat="item in $storage.physicalevidenceList" >
+<div class="item item-text-wrap" ng-repeat="item in $storage.physicalevidenceList" >
       <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="physicalevidenceFilter()" ng-click="$storage.phy = fav" >
        <label>{{item.text}}</label>
      </div>

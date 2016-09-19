@@ -6,7 +6,7 @@
 <h2>Product</h2>
 <div class="list">
 
-<div ng-repeat="item in $storage.productList" >
+<div class="item item-text-wrap" ng-repeat="item in $storage.productList" >
       <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="productFilter()" ng-click="$storage.pd = fav" >
        <label>{{item.text}}</label>
      </div>
