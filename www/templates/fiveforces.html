@@ -3,7 +3,7 @@
     <h1>Porter's Five Forces Analysis</h1>
 <h2>Threat of New Entry</h2>
 <div class="list">
-<div ng-repeat="item in $storage.newentryList" >
+<div class="item item-text-wrap" ng-repeat="item in $storage.newentryList" >
       <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="newentryFilter()" ng-click="$storage.ne = fav" >
        <label>{{item.text}}</label>
      </div>
@@ -15,7 +15,7 @@
 
 <h2>Competitive Rivalry</h2>
 <div class="list">
-<div ng-repeat="item in $storage.rivalryList" >
+<div  class="item item-text-wrap" ng-repeat="item in $storage.rivalryList" >
       <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="rivalryFilter()" ng-click="$storage.rv = fav" >
        <label>{{item.text}}</label>
      </div>
@@ -27,7 +27,7 @@
 
 <h2>Supplier Power</h2>
 <div class="list">
-<div ng-repeat="item in $storage.supplierpList" >
+<div class="item item-text-wrap" ng-repeat="item in $storage.supplierpList" >
       <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="supplierpFilter()" ng-click="$storage.sp = fav" >
        <label>{{item.text}}</label>
      </div>
@@ -39,7 +39,7 @@
 
 <h2>Buying Power</h2>
 <div class="list">
-<div ng-repeat="item in $storage.buyingpList" >
+<div class="item item-text-wrap" ng-repeat="item in $storage.buyingpList" >
       <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="buyingpFilter()" ng-click="$storage.bp = fav" >
        <label>{{item.text}}</label>
      </div>
@@ -51,7 +51,7 @@
 
 <h2>Threat of Substitution</h2>
 <div class="list">
-<div ng-repeat="item in $storage.substList" >
+<div class="item item-text-wrap" ng-repeat="item in $storage.substList" >
       <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="substFilter()" ng-click="$storage.sb = fav" >
        <label>{{item.text}}</label>
      </div>

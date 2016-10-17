@@ -3,7 +3,7 @@
     <h1>PEST Analysis</h1>
 <h2>Political</h2>
 <div class="list">
-<div ng-repeat="item in $storage.politicalList" >
+<div class="item item-text-wrap" ng-repeat="item in $storage.politicalList" >
       <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="politicalFilter()" ng-click="$storage.ppp = fav" >
        <label>{{item.text}}</label>
      </div>
@@ -15,7 +15,7 @@
 
 <h2>Economical</h2>
 <div class="list">
-<div ng-repeat="item in $storage.economicalList" >
+<div class="item item-text-wrap" ng-repeat="item in $storage.economicalList" >
       <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="economicalFilter()" ng-click="$storage.eee = fav" >
        <label>{{item.text}}</label>
      </div>
@@ -27,7 +27,7 @@
 
 <h2>Social</h2>
 <div class="list">
-<div ng-repeat="item in $storage.socialList" >
+<div class="item item-text-wrap" ng-repeat="item in $storage.socialList" >
       <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="socialFilter()" ng-click="$storage.sss = fav" >
        <label>{{item.text}}</label>
      </div>
@@ -39,7 +39,7 @@
 
 <h2>Technological</h2>
 <div class="list">
-<div ng-repeat="item in $storage.technologicalList" >
+<div class="item item-text-wrap" ng-repeat="item in $storage.technologicalList" >
       <ion-checkbox name="{{item.text}}" id="{{item.text}}" ng-model="item.checked" ng-change="technologicalFilter()" ng-click="$storage.ttt = fav" >
        <label>{{item.text}}</label>
      </div>

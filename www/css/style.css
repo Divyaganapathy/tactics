@@ -1,33 +1,134 @@
 /* Empty. Add your own CSS if you like */
-.large_button {
-  line-height: 50vh !important;
-  }
-
-  .small_button {
-    line-height: 30vh !important;
-    }
-  .circle{
-    width:10%;
-    border-radius:50%;
-    text-align:center;
-    font-size: 30px;
-    padding:5% 0;
-    line-height:0;
-    position:relative;
-    background: #38a9e4;
-    color: white;
-    font-family: Helvetica, Arial Black, sans;
-  }
+.large_button{
+  line-height: 40vh !important;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: 1px;
+  margin-top: 1px;
+  color: blue;
+font-size: 23px;
+text-align: justify;
+background: url(../img/info.png);
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center;width: 80%;
+height: 246px;
+margin: auto;
+z-index: 2;
+position: relative;
+}
+.large_button1{
+  line-height: 40vh !important;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: 1px;
+  margin-top: 1px;
+font-size: 23px;
+background: url(../img/finance.png);
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center;width: 80%;
+height: 246px;
+margin: auto;
+z-index: 2;
+position: relative;
+}
+.large_button2{
+  line-height: 40vh !important;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: 1px;
+  margin-top: 1px;
+font-size: 23px;
+background: url(../img/strategyy.jpg);
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center;width: 80%;
+height: 246px;
+margin: auto;
+z-index: 2;
+position: relative;
+}
+.large_button3{
+  line-height: 40vh !important;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: 1px;
+  margin-top: 1px;
+font-size: 23px;
+background: url(../img/mix.jpg);
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center;width: 80%;
+height: 246px;
+margin: auto;
+z-index: 2;
+position: relative;
+}
+.test{
+  background: url(../img/home.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;width: 80%;
+  height: 246px;
+  margin: auto;
+  z-index: 2;
+  position: relative;
+}
   table {
-      margin: 10px;
-  }
-  th, td {
-      padding: 5px;
-      border: 1px solid #999;
-  }
-  th {
-      background: #ccc;
-  }
-  tr:nth-child(odd) {
-      background: #eee;
-  }
+       margin: 10px;
+      }
+   th, td {
+       padding: 5px;
+       border: 1px solid #999;
+   }
+   th {
+       background: #ccc;
+   }
+   tr:nth-child(odd) {
+       background: #eee;
+   }
+   @media
+ only screen and (max-width: 760px),
+ (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+     /* Force table to not be like tables anymore */
+     table, thead, tbody, th, td, tr {
+         display: block;
+     }
+
+     /* Hide table headers (but not display: none;, for accessibility) */
+     thead tr {
+         position: absolute;
+         top: -9999px;
+         left: -9999px;
+     }
+
+     tr { border: 1px solid #ccc; }
+
+     td {
+         /* Behave  like a "row" */
+         border: none;
+         border-bottom: 1px solid #eee;
+         position: relative;
+         padding-left: 50%;
+     }
+
+     td:before {
+         /* Now like a table header */
+         position: absolute;
+         /* Top/left values mimic padding */
+         top: 6px;
+         left: 6px;
+         width: 45%;
+         padding-right: 10px;
+         white-space: nowrap;
+     }
+
+     /*
+     Label the data
+     */
+     td:nth-of-type(1):before { content: "Month"; }
+     td:nth-of-type(2):before { content: "Expected Sales"; }
+     td:nth-of-type(3):before { content: "Actual Sales"; }
+ }
